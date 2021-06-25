@@ -8,14 +8,14 @@
   </div> --}}
   <div class="nav d-flex p-4 ">
    <div class="logo">
-    <img class="logo" src="/assets/img/Group 49.svg" alt="">
+    <img class="logo-img" src="/assets/img/Group 49.svg" alt="">
    </div>
    <div class="nav-links">
-    <ul class="d-flex">
+    <ul class="d-flex mb-0">
      <li class="px-4"><a href="/{{app()->getLocale()}}/biografija">{{ __('text.biografija') }}</a></li>
-     <li class="px-4">{{ __('text.media') }}</li>
-     <li class="px-4">{{ __('text.dritanizam') }}</li>
-     <li class="px-4">{{ __('text.promjena') }}</li>
+     <li class="px-4"><a href="/{{app()->getLocale()}}/media">{{ __('text.media') }}</a></li>
+     <li class="px-4"><a href="/{{app()->getLocale()}}/dritanizam">{{ __('text.dritanizam') }}</a></li>
+     <li class="px-4"><a href="/{{app()->getLocale()}}/dritanizam">{{ __('text.promjena') }}</a></li>
     </ul>
    </div>
   </div>
@@ -33,9 +33,9 @@
    </div>
    <div class="languages">
     <ul class="d-flex">
-     <li class="px-4">MNE</li>
-     <li class="px-4">AL</li>
-     <li class="px-4">EN</li>
+     <li class="px-2">MNE</li>
+     <li class="px-2">AL</li>
+     <li class="px-2">EN</li>
  
     </ul>
    </div>

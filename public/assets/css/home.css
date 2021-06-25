@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +8,18 @@
 body {
     padding: 0;
     margin: 0;
+}
+.nav-links ul li a {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font: normal normal normal 21px/48px Roboto;
+}
+.homepage-links ul li {
+    font: normal normal normal 21px/24px Roboto;
+}
+.languages ul li {
+    font: normal normal normal 21px/24px Roboto;
+    color: #838383;
 }
 /*Intro*/
 .intro {
@@ -69,8 +82,10 @@ body {
 .logo {
     width: 10%;
 }
+
 .logo img {
     width: 100%;
+    height: 100%;
 }
 .nav-links {
     width: 90%;

@@ -1,0 +1,36 @@
+h4 {
+    color: blueviolet;
+}
+.container {
+    max-width: 1340px;
+}
+.header-links {
+    height: 100%;
+}
+.pt-6 {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+.header-helper {
+    height: 100%;
+}
+.header-link-active {
+    background-color: #d9c787;
+}
+.header-links ul li a {
+    color: black;
+}
+.logo-header-img {
+    background-color: black;
+    margin-top: 26%;
+}
+.btn-header {
+    background-image: linear-gradient(to right, #2c6d88, #3285a7);
+    border-radius: 0 !important;
+    color: white;
+    border: none !important;
+    padding: 1rem;
+    margin-top: 12%;
+}

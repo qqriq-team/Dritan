@@ -1,0 +1,106 @@
+.nav-second {
+    height: 50px;
+    background-color: #d9c787;
+}
+.container-nav {
+    max-width: 500px;
+}
+.nav-link {
+    color: white;
+}
+.nav-link a {
+    padding-right: 1rem;
+}
+.round-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.border-none {
+    border: none;
+}
+
+button {
+    z-index: 22;
+    position: relative;
+}
+
+hr {
+    width: 100%;
+    margin-top: -18px !important;
+    background-color: #d9c787;
+    height: 2px;
+    z-index: 1;
+}
+hr:not([size]) {
+    height: 2px !important;
+}
+.nav-link {
+    background: transparent;
+    margin-right: 30px;
+}
+.tab-content {
+    padding-top: 70px;
+}
+
+.tab-pane .h1-m {
+    margin-top: 150px;
+}
+p {
+    color: #838383;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #2c6d88;
+    background-color: transparent;
+}
+
+.timeline .nav-link img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.timeline .nav-link .circle {
+    -webkit-filter: none;
+    filter: none !important;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: transparent;
+    filter: none !important;
+}
+.nav-pills .nav-link.active img {
+    border: 2px solid #2c6d88;
+}
+.nav-pills .nav-link.active .circle {
+    background-color: #2c6d88 !important;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 63px;
+    background: #d9c787;
+    margin: auto;
+    margin-top: 20px;
+}
+.nav-pills .nav-link.active img {
+    border: 2px solid #2c6d88;
+    filter: none;
+}
+.nav-pills .nav-link.active p {
+    color: #2c6d88;
+}
+
+.clr-blue {
+    color: #2c6d88;
+}
+.icon {
+    width: 35px;
+    border-radius: 50%;
+    background-color: #d9c787;
+    height: 35px;
+}
+
+.clr-yellow {
+    color: #d9c787;
+}

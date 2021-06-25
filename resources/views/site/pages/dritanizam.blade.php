@@ -1,7 +1,5 @@
-@extends('site.app')
 @extends('site.partials.header')
-
-@section('content')
-<h1>dritanizam</h1>
-  
+@section('header_content')
+    <div class="h"></div>
+<h1>dritanizacija</h1>
 @endsection

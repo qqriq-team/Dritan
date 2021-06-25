@@ -1,0 +1,56 @@
+.container-nav-media {
+    max-width: 600px;
+}
+
+#owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.owl-theme .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+}
+
+.owl-bg p {
+    position: absolute;
+    top: 75%;
+    background: #6e9c8c;
+    opacity: 0.9;
+    color: white;
+    z-index: 9;
+    width: 70%;
+}
+
+.owl-next {
+    position: absolute;
+    left: 10px;
+    width: 25px;
+    background: transparent url(/assets/img/Drop_down_strelica_left-01.svg) 0%
+        0% no-repeat padding-box !important;
+    background-size: 25px !important;
+}
+.owl-next span {
+    visibility: hidden;
+}
+
+.owl-prev {
+    position: absolute;
+    right: 0px;
+    width: 25px;
+    background: transparent url(/assets/img/Drop_down_strelica_right-01.svg) 0%
+        0% no-repeat padding-box !important;
+    background-size: 25px !important;
+}
+.owl-prev span {
+    visibility: hidden;
+}
+.owl-carousel .owl-nav button.owl-prev {
+    height: 35px;
+}
+.owl-carousel .owl-nav button.owl-next {
+    height: 35px;
+}
+
+

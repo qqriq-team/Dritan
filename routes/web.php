@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SitePagesController;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,12 @@ Route::get('/setLocaleRout/{lang}', function ($lang) {
 
  Route::prefix('{lang}')->middleware('setlocale')->group(function() {
    Route::get('/', [HomeController::class, 'index']);
-   Route::get('/biografija', [SitePagesController::class, 'index']);
+   Route::view('/biografija', 'site.pages.biografija');
+   Route::view('/media', 'site.pages.media');
+   Route::view('/dritanizam', 'site.pages.dritanizam');
+   
+   Route::get('/blog', [BlogController::class ,'index'])->name('blog');
+
+
   });
   
