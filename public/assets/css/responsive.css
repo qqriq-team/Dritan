@@ -1,0 +1,116 @@
+@media screen and (max-width: 600px) {
+    .hr-mobile {
+        left: 0;
+        position: absolute;
+        bottom: 60.3%;
+    }
+    .timeline {
+        height: 200px;
+    }
+    .aktivizam {
+        white-space: nowrap;
+    }
+    .nav {
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+    }
+    .nav ul li {
+        white-space: nowrap;
+    }
+    .header-desktop {
+        display: none;
+    }
+    .header-mobile {
+        display: block;
+    }
+    .header-mobile-links {
+        display: none;
+        background: #d9c787;
+    }
+    .header-mobile-links.mobile-open {
+        display: block;
+        background: #d9c787;
+    }
+    .header-mobile-links ul li a {
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: white;
+    }
+
+    .header-btn-mobile {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        /* border: 3px solid white; */
+    }
+    .header-toggle {
+        width: 50px;
+        height: 6px;
+        background-color: #d9c787;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+        transition: all 0.5s ease-in-out;
+    }
+    .header-toggle::before,
+    .header-toggle::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background: #d9c787;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+        transition: all 0.5s ease-in-out;
+    }
+    .header-toggle::before {
+        transform: translateY(-16px);
+    }
+    .header-toggle::after {
+        transform: translateY(16px);
+    }
+    /*Animacija mobile nav*/
+    .header-btn-mobile.open .header-toggle {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+    .header-btn-mobile.open .header-toggle::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .header-btn-mobile.open .header-toggle::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+    .mobile-active {
+        color: #2c6d88 !important;
+    }
+}
+@media screen and (min-width: 600px) {
+    .header-mobile {
+        display: none;
+    }
+}
+/*tablet*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .nav {
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+    }
+    .nav ul li {
+        white-space: nowrap;
+    }
+    .hr-mobile {
+        left: 0;
+        position: absolute;
+        bottom: 60.3%;
+    }
+    .timeline {
+        height: 200px;
+    }
+}

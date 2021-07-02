@@ -6,10 +6,10 @@
   <div class="container-nav m-auto">
    <ul class="nav nav-pills" id="pills-tab" role="tablist">
      <li class="nav-item" role="presentation">
-       <a class="nav-link p-0 pl-0 pr-3 active" id="pills-istorija-tab" data-bs-toggle="pill" data-bs-target="#pills-istorija" type="button" role="tab" aria-controls="pills-istorija" aria-selected="true">Istorijat</a>
+       <a class="nav-link p-0 pl-0 pr-3 active" id="pills-istorija-tab" data-bs-toggle="pill" data-bs-target="#pills-istorija" type="button" role="tab" aria-controls="pills-istorija" aria-selected="true">{{ __('text.istorijat') }} </a>
      </li>
      <li class="nav-item" role="presentation">
-       <a class="nav-link p-0 px-3" id="pills-biografija-tab" data-bs-toggle="pill" data-bs-target="#pills-biografija" type="button" role="tab" aria-controls="pills-biografija" aria-selected="false">Biografija</a>
+       <a class="nav-link p-0 px-3" id="pills-biografija-tab" data-bs-toggle="pill" data-bs-target="#pills-biografija" type="button" role="tab" aria-controls="pills-biografija" aria-selected="false">{{ __('text.biografija') }} </a>
      </li>
 
    </ul>
@@ -38,7 +38,7 @@
         >
           <img class="round-img" src="/assets/img/9.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">Djetinjstvo</p>
+          <p class="position-absolute">{{ __('text.djetinjstvo') }}</p>
         </button>
       </li>
       <li class="nav-item " role="presentation">
@@ -52,9 +52,9 @@
           aria-controls="pills-obrazovanje"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/9.png" alt="" />
+          <img class="round-img" src="/assets/img/dritan2.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">Obrazovanje</p>
+          <p class="position-absolute">{{ __('text.obrazovanje') }}</p>
           
         </button>
       </li>
@@ -69,9 +69,9 @@
           aria-controls="pills-nauka"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/9.png" alt="" />
+          <img class="round-img" src="/assets/img/dritan5.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">Naučni rad</p>
+          <p class="position-absolute">{{ __('text.naucnirad') }}</p>
 
         </button>
       </li>
@@ -86,9 +86,9 @@
           aria-controls="pills-karijera"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/9.png" alt="" />
+          <img class="round-img" src="/assets/img/dritan33.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">Radna karijera</p>
+          <p class="position-absolute">{{ __('text.karijera') }}</p>
 
         </button>
       </li>
@@ -103,9 +103,9 @@
           aria-controls="pills-politika"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/9.png" alt="" />
+          <img class="round-img" src="/assets/img/dritan4.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">Politički angažman</p>
+          <p class="position-absolute">{{ __('text.politickiangazman') }}</p>
 
         </button>
       </li>
@@ -120,13 +120,13 @@
           aria-controls="pills-rad"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/9.png" alt="" />
+          <img class="round-img" src="/assets/img/dritan6.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">Dobrotvorni rad</p>
+          <p class="position-absolute">{{ __('text.dobrotvornirad') }}</p>
 
         </button>
       </li>
-      <hr />
+      <hr class="hr-mobile"/>
     </ul>
     <div class="tab-content container" id="pills-tabContent">
       <div
@@ -135,14 +135,9 @@
         role="tabpanel"
         aria-labelledby="pills-djetinjstvo-tab"
       >
-        <h1 class="h1-m">Dritan Abazović rođen je u Ulcinju.</h1>
+        <h1 class="h1-m"></h1>
         <p>
-          Dritan Abazović rođen je 25.12.1985. godine u Ulcinju. Osnovnu školu i
-          Gimnaziju završio je u Ulcinju, diplomirao na Fakultetu političkih
-          nauka, stekao zvanje diplomirani politikolog; student generacije i
-          dobitnik “Zlatne značke” i “Zlatne povelje” Univerziteta u Sarajevu.
-          Od 2005. do 2007. bio je asistent na Fakultetu političkih nauka
-          Univerziteta u Sarajevu.
+{{ __('text.djetinjstvo1') }} 
         </p>
       </div>
       <div
@@ -151,20 +146,13 @@
         role="tabpanel"
         aria-labelledby="pills-obrazovanje-tab"
       >
-        <h1 class="h1-m">Edukacija</h1>
+        <h1 class="h1-m"></h1>
         <p>
-          Magistrirao je 2008. godine na Odsjeku za međunarodne odnose Fakulteta
-          političkih nauka Univerziteta u Crnoj Gori. Na Fakultetu političkih
-          nauka u Sarajevu 2009. odbranio je doktorsku disertaciju na temu
-          “Globalna politika – Etički aspekti globalizacije”. Dugogodišnji
-          saradnik nevladinih organizacija iz oblasti ljudskih prava,
-          euroatlantizma i građanskog aktivizma. Bio angažovan na projektima u
-          vezi sa promocijom multikulturalizma u post-konfliktnim zonama bivše
-          Jugoslavije. Učesnik mnogobrojnih međunarodnih programa, konferencija
-          i seminara poput: Internacionalne ljetnje škole u Oslu, Međunarodnog
-          programa liderstva u Stejt Department-u, SAD, Regionalne akademije za
-          demokratiju u Barseloni, Strateškog foruma Bled, Konferencije OSCE PA
-          “Izborni proces u konfliktnim regijama” u Kijevu.
+{{ __('text.obrazovanje1') }} 
+<br>
+<br>
+{{ __('text.obrazovanje2') }} 
+
         </p>
       </div>
       <div
@@ -173,17 +161,24 @@
         role="tabpanel"
         aria-labelledby="pills-nauka-tab"
       >
-        <h1 class="h1-m">Specijalista za nekoliko studijskih programa</h1>
+        <h1 class="h1-m"></h1>
         <p>
-          Kao polaznik međunarodnih programa, konferencija i seminara,
-          specijalizovao se za nekoliko studijskih programa. 2009. godine
-          završio je kurs za istraživanje mira na Univerzitetu u Oslu. Na istom
-          univerzitetu završio je seminar za stručno usavršavanje. Takođe, bio
-          je angažovan i kao predavač na temu “Istočna Evropa”, na Institutu za
-          tehnologiju MSU, Iligan (Filipini) i na temu “Novi koncept ljudske
-          bezbjednosti u političkom sektoru”, na Bilgi Univerzitetu u Istanbulu.
-          Svoju prvu knjigu “Kosmopolitska kultura i globalna pravda“ objavio je
-          2010. godine.
+          {{ __('text.rad1') }} 
+        </p>
+         <p>
+          {{ __('text.rad2') }} 
+        </p>
+         <p>
+        {{ __('text.rad3') }} 
+        </p>
+         <p>
+        {{ __('text.rad4') }} 
+        </p>
+        <p>
+        {{ __('text.rad5') }} 
+        </p>
+        <p>
+        {{ __('text.rad6') }} 
         </p>
       </div>
             <div
@@ -192,17 +187,20 @@
         role="tabpanel"
         aria-labelledby="pills-karijera-tab"
       >
-        <h1 class="h1-m">Karijera</h1>
+        <h1 class="h1-m"></h1>
         <p>
-          Kao polaznik međunarodnih programa, konferencija i seminara,
-          specijalizovao se za nekoliko studijskih programa. 2009. godine
-          završio je kurs za istraživanje mira na Univerzitetu u Oslu. Na istom
-          univerzitetu završio je seminar za stručno usavršavanje. Takođe, bio
-          je angažovan i kao predavač na temu “Istočna Evropa”, na Institutu za
-          tehnologiju MSU, Iligan (Filipini) i na temu “Novi koncept ljudske
-          bezbjednosti u političkom sektoru”, na Bilgi Univerzitetu u Istanbulu.
-          Svoju prvu knjigu “Kosmopolitska kultura i globalna pravda“ objavio je
-          2010. godine.
+          <p>
+        {{ __('text.karijera1') }} 
+
+          </p>
+          <p>
+        {{ __('text.karijera2') }} 
+
+          </p>
+          <p>
+        {{ __('text.karijera3') }} 
+
+          </p>
         </p>
       </div>
       <div
@@ -211,17 +209,22 @@
          role="tabpanel"
          aria-labelledby="pills-politika-tab"
        >
-         <h1 class="h1-m">politika</h1>
+         <h1 class="h1-m"></h1>
          <p>
-           Kao polaznik međunarodnih programa, konferencija i seminara,
-           specijalizovao se za nekoliko studijskih programa. 2009. godine
-           završio je kurs za istraživanje mira na Univerzitetu u Oslu. Na istom
-           univerzitetu završio je seminar za stručno usavršavanje. Takođe, bio
-           je angažovan i kao predavač na temu “Istočna Evropa”, na Institutu za
-           tehnologiju MSU, Iligan (Filipini) i na temu “Novi koncept ljudske
-           bezbjednosti u političkom sektoru”, na Bilgi Univerzitetu u Istanbulu.
-           Svoju prvu knjigu “Kosmopolitska kultura i globalna pravda“ objavio je
-           2010. godine.
+          <p>
+        {{ __('text.angazman1') }} 
+        <br>
+        {{ __('text.angazman2') }} 
+
+          </p>
+          <p>
+        {{ __('text.angazman3') }} 
+
+          </p>
+          <p>
+        {{ __('text.angazman4') }} 
+
+          </p>
          </p>
        </div>
              <div
@@ -232,25 +235,17 @@
        >
          <h1 class="h1-m">rad</h1>
          <p>
-           Kao polaznik međunarodnih programa, konferencija i seminara,
-           specijalizovao se za nekoliko studijskih programa. 2009. godine
-           završio je kurs za istraživanje mira na Univerzitetu u Oslu. Na istom
-           univerzitetu završio je seminar za stručno usavršavanje. Takođe, bio
-           je angažovan i kao predavač na temu “Istočna Evropa”, na Institutu za
-           tehnologiju MSU, Iligan (Filipini) i na temu “Novi koncept ljudske
-           bezbjednosti u političkom sektoru”, na Bilgi Univerzitetu u Istanbulu.
-           Svoju prvu knjigu “Kosmopolitska kultura i globalna pravda“ objavio je
-           2010. godine.
+nema teskta
          </p>
        </div>
     </div>
   </div>
   <div class="tab-pane fade" id="pills-biografija" role="tabpanel" aria-labelledby="pills-biografija-tab">
    <div class="row">
-    <div class="col-3">slika</div>
-    <div class="col-9">
-      <h2 class="clr-blue">Kosmopolitska kultura i globalna pravda</h2>
-      <p>Lorem ipsum dolor sit amet, ex veri liberavisse duo. Vivendo qualisque voluptatum duo id. His omittam accusata at. Veri primis eum an, eu eos tota aliquip molestie, duo vide minimum efficiantur an. Ad mucius pertinacia incorrupte duo, alienum repudiare eu sed. Duo id debitis efficiantur, suavitate voluptatum adversarium ea cum. Erant assentior ea usu.</p>
+    <div class="col-lg-3 col-12">slika</div>
+    <div class="col-lg-9 col-12">
+      <h2 class="clr-blue">{{ __('text.naslovknjige1') }}</h2>
+      <p>{{ __('text.tekstknjige1') }}</p>
       <a href="" class="clr-yellow d-flex">
         <div class="icon"></div>
         <p class="clr-yellow p-1">Prelistaj knjigu</p>

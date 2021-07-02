@@ -29,6 +29,8 @@ Route::get('/setLocaleRout/{lang}', function ($lang) {
    Route::view('/biografija', 'site.pages.biografija');
    Route::view('/media', 'site.pages.media');
    Route::view('/dritanizam', 'site.pages.dritanizam');
+   Route::view('/dashboard', 'site.admin.dashboard');
+
    
    Route::get('/blog', [BlogController::class ,'index'])->name('blog');
 

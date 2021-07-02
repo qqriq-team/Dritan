@@ -5,7 +5,6 @@
     height: 100%; /*uklniti*/
     object-fit: cover;
     cursor: pointer;
-    border: 2px solid black;
 }
 
 .thumbnail {
@@ -15,7 +14,6 @@
     cursor: pointer;
     opacity: 0.5;
     margin: 5px;
-    border: 2px solid black;
 }
 .thumbnail:hover {
     opacity: 1;

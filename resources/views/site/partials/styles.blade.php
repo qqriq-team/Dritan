@@ -7,6 +7,8 @@
    <link href="/assets/css/media.css" rel="stylesheet">
    <link href="/assets/css/dritanizaija.css" rel="stylesheet">
    <link href="/assets/css/blog.css" rel="stylesheet">
+   <link href="/assets/css/responsive.css" rel="stylesheet">
+
 
 
 

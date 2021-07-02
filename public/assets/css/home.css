@@ -134,3 +134,23 @@ ul li {
     text-align: left;
     font: normal normal normal 16px/48px Roboto;
 }
+footer {
+    height: 70px;
+    position: fixed;
+    background-color: #2c6d88;
+    z-index: 99999;
+    top: 94%;
+    left: 0;
+}
+.footer li a {
+    color: white;
+    padding: 0px 55px;
+}
+.lang-footer li a {
+    padding: 0px 10px;
+    color: #81ada0;
+}
+
+.lang-footer li .active-language {
+    color: #d9c787;
+}
