@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -19,9 +20,18 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'admin',
                 'email' => 'admin@admin.com',
-                'password'=> bcrypt('admin')
+                'password' => bcrypt('admin')
             ]
 
+        );
+        Blog::create(
+            [
+                'title' => 'prvi blog',
+                'cover_image'=> 'https://via.placeholder.com/150',
+                'cover_text' => 'text text text',
+                'blog' => 'blog blog blog',
+                'yt_link' => 'https://www.youtube.com/watch?v=kpeEQVFuaxk'
+            ]
         );
     }
 }

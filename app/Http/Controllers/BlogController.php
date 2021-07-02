@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,7 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('site.pages.blogpost');
+        $blogs = Blog::get();
+        return view('site.pages.blogpost', compact('blogs'));
     }
 
     /**
@@ -46,6 +49,8 @@ class BlogController extends Controller
     public function show($id)
     {
         //
+        $blog = Blog::find($id);
+        return view('site.pages.blogpost', compact('blog'));
     }
 
     /**
@@ -80,5 +85,6 @@ class BlogController extends Controller
     public function destroy($id)
     {
         //
+        Blog::find($id)->delete();
     }
 }
