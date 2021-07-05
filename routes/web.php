@@ -30,13 +30,16 @@ Route::get('/setLocaleRout/{lang}', function ($lang) {
 Route::prefix('{lang}')->middleware('setlocale')->group(function () {
   Route::get('/', [HomeSiteController::class, 'index']);
   Route::view('/biografija', 'site.pages.biografija');
-  Route::view('/media', 'site.pages.media');
+  // Route::view('/media', 'site.pages.media');
   Route::view('/dritanizam', 'site.pages.dritanizam');
   Route::view('/dashboard', 'site.admin.dashboard');
-  Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+  Route::resource('blogs', 'BlogController');
+  Route::get('/blogs/destroy/{id}', [BlogController::class, 'destroy']);
+  Route::get('/media', [BlogController::class, 'indexBlogsOnSite'])->name('indexBlogsOnSite');
+  Route::get('/media/{id}', [BlogController::class, 'showBlogsOnSite'])->name('showBlogsOnSite');
   Auth::routes();
   Route::group(['middleware' => 'admin'], function () {
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+  Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
   });
 });
 

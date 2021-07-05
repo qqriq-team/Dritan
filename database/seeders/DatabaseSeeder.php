@@ -26,11 +26,21 @@ class DatabaseSeeder extends Seeder
         );
         Blog::create(
             [
-                'title' => 'prvi blog',
                 'cover_image'=> 'https://via.placeholder.com/150',
-                'cover_text' => 'text text text',
-                'blog' => 'blog blog blog',
-                'yt_link' => 'https://www.youtube.com/watch?v=kpeEQVFuaxk'
+                'yt_link' => 'https://www.youtube.com/watch?v=kpeEQVFuaxk',
+                'images' => 'https://via.placeholder.com/150',
+                'lang_mne' => 'mne',
+                'title_mne' => 'prvi blog mne',
+                'cover_text_mne' => 'text text text mne',
+                'blog_mne' => 'blog blog blog mne',
+                'lang_en' => 'en',
+                'title_en' => 'first blog en',
+                'cover_text_en' => 'text text text en',
+                'blog_en' => 'blog blog blog en',
+                'lang_al' => 'al',
+                'title_al' => 'nje blog al',
+                'cover_text_al' => 'text text text al',
+                'blog_al' => 'blog blog blog al',
             ]
         );
     }
