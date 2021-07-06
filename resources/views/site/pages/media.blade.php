@@ -22,9 +22,12 @@
 
 <div class="tab-content p-0" id="pills-tabContent">
   <div class="tab-pane fade show  active" id="pills-aktivizam" role="tabpanel" aria-labelledby="pills-istorija-tab">
-    <h1>Gradjanski aktivizam</h1>
     {{--  loop for blogs --}}
     <div class="row">
+      <?php
+      $colcount = count($blogs);
+      $i = 1;
+    ?>
     @foreach ($blogs as $blog)
 
       <div class="col-lg-4 col-12 my-4">
@@ -49,10 +52,13 @@
     @endforeach
 
 
-     </div>
+  @if ($i++ % 3 == 0)
+      </div>
+      <div class="row mx-0 px-0">
+
+  @endif
     </div>
     <div class="tab-pane fade" id="pills-politicki" role="tabpanel" aria-labelledby="pills-politicki-tab">
-      <h1>Gradjanski aktivizam</h1>
     <div class="row">
      <div class="col-lg-4 col-12 my-4">
     <div class="owl-carousel owl-theme drag-m" >

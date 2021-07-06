@@ -9,7 +9,7 @@
        <a class="nav-link p-0 pl-0 pr-3 active" id="pills-istorija-tab" data-bs-toggle="pill" data-bs-target="#pills-istorija" type="button" role="tab" aria-controls="pills-istorija" aria-selected="true">{{ __('text.istorijat') }} </a>
      </li>
      <li class="nav-item" role="presentation">
-       <a class="nav-link p-0 px-3" id="pills-biografija-tab" data-bs-toggle="pill" data-bs-target="#pills-biografija" type="button" role="tab" aria-controls="pills-biografija" aria-selected="false">{{ __('text.biografija') }} </a>
+       <a class="nav-link p-0 px-3" id="pills-biografija-tab" data-bs-toggle="pill" data-bs-target="#pills-biografija" type="button" role="tab" aria-controls="pills-biografija" aria-selected="false">{{ __('text.bibliografija') }} </a>
      </li>
 
    </ul>
@@ -235,21 +235,23 @@
        >
          <h1 class="h1-m">rad</h1>
          <p>
-nema teskta
+            nema teskta
          </p>
        </div>
     </div>
   </div>
   <div class="tab-pane fade" id="pills-biografija" role="tabpanel" aria-labelledby="pills-biografija-tab">
    <div class="row">
-    <div class="col-lg-3 col-12">slika</div>
+    <div class="col-lg-3 col-12"><img src="/assets/img/Dritan Abazović - Kosmopolitska kultura - Knjiga-Mockup.png" width="100%" alt=""></div>
     <div class="col-lg-9 col-12">
       <h2 class="clr-blue">{{ __('text.naslovknjige1') }}</h2>
       <p>{{ __('text.tekstknjige1') }}</p>
-      <a href="" class="clr-yellow d-flex">
-        <div class="icon"></div>
-        <p class="clr-yellow p-1">Prelistaj knjigu</p>
-      </a>
+      <div class="d-flex">
+        <a href="/assets/books/Dritan Abazovic -Kosmopolitska kultura i globalna pravda.pdf" target="_blank" class="clr-yellow d-flex">
+          <div class="icon"><img src="/assets/img/book-icon.svg" alt=""></div>
+          <a href="/assets/books/Dritan Abazovic -Kosmopolitska kultura i globalna pravda.pdf" target="_blank" class="clr-yellow p-1">Prelistaj knjigu</a>
+        </a>
+      </div>
     </div>
    </div>
   </div>

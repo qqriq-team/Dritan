@@ -4,7 +4,7 @@
  <div class="header  header-desktop">
   <div class="header-helper  d-flex justify-content-between">
    <div class="logo-header pt-4 pl-0">
-    <img class="logo-header-img " src="/assets/img/Group 49.svg" alt="">
+    <img class="logo-header-img " src="/assets/img/logo-D.svg" alt="">
       
    </div>
    <div class="header-links">
@@ -24,13 +24,13 @@
  <div class="header-mobile">
    <div class="d-flex">
    <div class="header-btn-mobile">
-   <div class="header-toggle">
+     <div class="header-toggle">
     </div>
    </div>
      <div class="header-mobile-logo">
-       <img src="/assets/img/Group 49.svg" alt="">
-      </div>
-      </div>
+     <img class="logo-header-img m-4" src="/assets/img/logo-D.svg" width="100%" alt="">
+    </div>
+  </div>
       <div class="header-mobile-links">
         <ul>
           <li><a id="biografija-mobile" href="/{{app()->getLocale()}}/biografija">{{ __('text.biografija') }}</a></li>
