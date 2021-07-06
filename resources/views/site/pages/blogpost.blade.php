@@ -4,13 +4,13 @@
   <div class="container-nav-media m-auto">
    <ul class="nav nav-pills" id="pills-tab" role="tablist">
      <li class="nav-item" role="presentation">
-       <a class="nav-link p-0 pl-0 pr-3 active" id="pills-aktivizam-tab" href="/media" >Građanski aktivizam</a>
+       <a class="nav-link p-0 pl-0 pr-3 active" id="pills-aktivizam-tab" href="/{{app()->getLocale()}}/media" >Građanski aktivizam</a>
      </li>
      <li class="nav-item" role="presentation">
-       <a class="nav-link p-0 px-3" id="pills-politicki-tab" href="/media">Politički aktivizam</a>
+       <a class="nav-link p-0 px-3" id="pills-politicki-tab" href="/{{app()->getLocale()}}/media">Politički aktivizam</a>
      </li>
           <li class="nav-item" role="presentation">
-       <a class="nav-link p-0 px-3" id="pills-globus-tab" href="/media">Globus</a>
+       <a class="nav-link p-0 px-3" id="pills-globus-tab" href="/{{app()->getLocale()}}/media">Globus</a>
      </li>
 
    </ul>

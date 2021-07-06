@@ -1,6 +1,6 @@
 
-<footer class="w-100 ">
-  <div class="footer w-100">
+<footer class="w-100  position-fixed">
+  <div class="footer w-100 container p-0">
     <div class="container d-flex justify-content-between">
       <div class="social-footer">
         <ul class="d-flex footer">

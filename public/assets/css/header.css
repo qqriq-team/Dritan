@@ -18,19 +18,27 @@ h4 {
 }
 .header-link-active {
     background-color: #d9c787;
+    color: #2e6e88 !important;
+}
+.header-link-active a {
+    color: #2e6e88 !important;
 }
 .header-links ul li a {
-    color: black;
+    color: #3c3c3c;
 }
 .logo-header-img {
-    background-color: black;
     margin-top: 26%;
 }
 .btn-header {
     background-image: linear-gradient(to right, #2c6d88, #3285a7);
     border-radius: 0 !important;
     color: white;
-    border: none !important;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     margin-top: 12%;
+    border: 7px double white !important;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+.btn-header:hover {
+    color: #d9c787;
 }

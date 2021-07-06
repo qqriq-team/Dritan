@@ -11,6 +11,7 @@
         left: 0;
         position: absolute;
         bottom: 60.3%;
+        display: none;
     }
     .timeline {
         height: 200px;
