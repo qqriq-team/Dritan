@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogImageController;
 use App\Http\Controllers\HomeSiteController;
 use App\Http\Controllers\SitePagesController;
 use Illuminate\Support\Facades\App;
@@ -34,7 +35,9 @@ Route::prefix('{lang}')->middleware('setlocale')->group(function () {
   Route::view('/dritanizam', 'site.pages.dritanizam');
   Route::view('/dashboard', 'site.admin.dashboard');
   Route::resource('blogs', 'BlogController');
+  Route::resource('blogimages', 'BlogImageController');
   Route::get('/blogs/destroy/{id}', [BlogController::class, 'destroy']);
+  Route::post('/blogs/photo/delete/{id}', [BlogController::class, 'deletePhoto']);
   Route::get('/media', [BlogController::class, 'indexBlogsOnSite'])->name('indexBlogsOnSite');
   Route::get('/media/{id}', [BlogController::class, 'showBlogsOnSite'])->name('showBlogsOnSite');
   Auth::routes();

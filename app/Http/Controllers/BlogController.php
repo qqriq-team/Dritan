@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Middleware\Language;
 use App\Models\Blog;
+use App\Models\BlogImages;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use  Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
@@ -27,7 +29,7 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('site.pages.media', compact('blogs'));
     }
-       /**
+    /**
      * Show specific blog on site.
      *
      * @param  int  $id
@@ -47,7 +49,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('site.admin.blog.create');
+        $categories = Category::get();
+        return view('site.admin.blog.create', compact('categories'));
     }
 
     /**
@@ -81,19 +84,7 @@ class BlogController extends Controller
 
         $blog = new Blog();
 
-        if (!empty($request->hasFile('images')) && !empty($request->hasFile('cover_photo'))) {
-            foreach ($request->file('images') as $image) {
-                $name = $image->getClientOriginalName();
-                $extension = $image->getClientOriginalExtension();
-                $fileName = time() . '_' . Str::random(5) . '.' . $extension;
-                Image::make($image)->encode('jpg', 75)->resize(1200, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save('assets/blog_images/' . $fileName);
-                $data[] = $name;
-                $image1 = new Image;
-                $image1->title = json_encode($data);
-                $blog->images = $fileName;
-            }
+        if (!empty($request->hasFile('cover_photo'))) {
             $coverPhoto = $request->file('cover_photo');
             $name1 = $coverPhoto->getClientOriginalName();
             $extension1 = $coverPhoto->getClientOriginalExtension();
@@ -101,10 +92,11 @@ class BlogController extends Controller
             Image::make($coverPhoto)->encode('jpg', 75)->resize(1200, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('assets/blog_cover_img/' . $fileName1);
-            $blog->cover_image =  $fileName1;
+            $blog->cover_image = $fileName1;
         }
 
         $blog->yt_link = $request->yt_link;
+        $blog->categories_id = $request->cat_id;
         $blog->lang_mne = $request->lang_mne;
         $blog->lang_en = $request->lang_en;
         $blog->lang_al = $request->lang_al;
@@ -118,6 +110,25 @@ class BlogController extends Controller
         $blog->blog_en = $request->body_en;
         $blog->blog_al = $request->body_al;
         $blog->save();
+
+        if (!empty($request->hasFile('images'))) {
+            foreach ($request->file('images') as $image) {
+                $name = $image->getClientOriginalName();
+                $extension = $image->getClientOriginalExtension();
+                $fileName = time() . '_' . Str::random(5) . '.' . $extension;
+                Image::make($image)->encode('jpg', 75)->resize(1200, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('assets/blog_images/' . $fileName);
+                $data[] = $name;
+                $image1 = new Image;
+                $image1->title = json_encode($data);
+
+                $blogs_images = new BlogImages();
+                $blogs_images->images = $fileName;
+                $blogs_images->blogs_id = $blog->id;
+                $blogs_images->save();
+            }
+        }
         return redirect()->back()
             ->withSuccess("Added successfully!")
             ->withInput();
@@ -131,8 +142,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $blog = Blog::find($id);
-        return view('site.pages.blogpost', compact('blog'));
+        // $blog = Blog::find($id);
+        // return view('site.pages.blogpost', compact('blog'));
     }
 
     /**
@@ -142,10 +153,12 @@ class BlogController extends Controller
      * @param Language $locale
      * @return \Illuminate\Http\Response
      */
-    public function edit($locale,$id)
+    public function edit($locale, $id)
     {
+        $categories = Category::get();
         $blog = Blog::where('id', $id)->first();
-        return view('site.admin.blog.edit', compact('blog'));
+        $blogImages = BlogImages::where('blogs_id', $id)->get();
+        return view('site.admin.blog.edit', compact('blog', 'categories','blogImages'));
     }
 
     /**
@@ -153,26 +166,16 @@ class BlogController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     * @param  Language  $lang
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($lang, Request $request, $id)
     {
 
         $blog = Blog::where('id', $id)->first();
 
-        if (!empty($request->hasFile('images')) && !empty($request->hasFile('cover_photo'))) {
-            foreach ($request->file('images') as $image) {
-                $name = $image->getClientOriginalName();
-                $extension = $image->getClientOriginalExtension();
-                $fileName = time() . '_' . Str::random(5) . '.' . $extension;
-                Image::make($image)->encode('jpg', 75)->resize(1200, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save('assets/blog_images/' . $fileName);
-                $data[] = $name;
-                $image1 = new Image;
-                $image1->title = json_encode($data);
-                $blog->images = $fileName;
-            }
+        if (!empty($request->hasFile('cover_photo'))) {
+  
             $coverPhoto = $request->file('cover_photo');
             $name1 = $coverPhoto->getClientOriginalName();
             $extension1 = $coverPhoto->getClientOriginalExtension();
@@ -194,6 +197,24 @@ class BlogController extends Controller
         $blog->cover_text_en = $request->cover_text_en;
         $blog->cover_text_al = $request->cover_text_al;
         $blog->update();
+
+        if (!empty($request->hasFile('images'))) {
+            foreach ($request->file('images') as $image) {
+                $name = $image->getClientOriginalName();
+                $extension = $image->getClientOriginalExtension();
+                $fileName = time() . '_' . Str::random(5) . '.' . $extension;
+                Image::make($image)->encode('jpg', 75)->resize(1200, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('assets/blog_images/' . $fileName);
+                $data[] = $name;
+                $image1 = new Image;
+                $image1->title = json_encode($data);
+                $blog->images = $image1->title;
+                
+                $blogs_images = BlogImages::where('blogs_id', $blog->id)->get();
+                $blogs_images->update(['images' => $fileName]);
+            }
+        }
         return redirect()->back()
             ->withSuccess("Updated successfully!")
             ->withInput();
@@ -212,7 +233,25 @@ class BlogController extends Controller
         $blogs->delete();
 
         return redirect()->back()
-        ->withSuccess("Blog is successfully deleted!")
-        ->withInput();
+            ->withSuccess("Blog is successfully deleted!")
+            ->withInput();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @param Language $locale
+     * @return \Illuminate\Http\Response
+     */
+    public function deletePhoto($locale, Request $request)
+    {
+        dd($request);
+        $blogs =  Blog::find($request->id);
+        $blogs->delete('');
+
+        return redirect()->back()
+            ->withSuccess("Blog is successfully deleted!")
+            ->withInput();
     }
 }

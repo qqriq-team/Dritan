@@ -24,6 +24,14 @@
                         <input type="text" name="lang_mne" value="mne" hidden>
                         <input type="text" name="lang_en" value="en" hidden>
                         <input type="text" name="lang_al" value="al" hidden>
+                        <div class="pb-5">
+                            <select class="categories form-control" name="cat_id" id="cat_id">
+                                @foreach ($categories as $category)
+                                    <option name="cat_name" id="cat_name" value="{{ $category->id }}">
+                                        {{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
@@ -103,7 +111,7 @@
                         </div>
                         <div class="d-flex" class="form-group">
                             <div class="form-group">
-                                <label for="exampleFormControlFile1">Fotografija</label>
+                                <label for="exampleFormControlFile1">Fotografije</label>
                                 <input type="file" name="images[]" class="form-control-file" id="exampleFormControlFile1"
                                     multiple="multiple">
                             </div>
@@ -113,9 +121,9 @@
                                     id="exampleFormControlFile1">
                             </div>
                         </div>
-                    <div>
-                        <input class="btn btn-danger" type="submit" value="Submit">
-                    </div>
+                        <div>
+                            <input class="btn btn-danger" type="submit" value="Submit">
+                        </div>
                     </form>
                 </div>
 
