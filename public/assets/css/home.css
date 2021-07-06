@@ -133,6 +133,7 @@ ul li {
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
     font: normal normal normal 16px/48px Roboto;
+    white-space: nowrap;
 }
 footer {
     height: 70px;

@@ -1,4 +1,12 @@
 @media screen and (max-width: 600px) {
+    /*blog post helper*/
+    .blog-helper .row {
+        display: block !important;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
     .hr-mobile {
         left: 0;
         position: absolute;

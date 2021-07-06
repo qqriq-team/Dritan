@@ -725,3 +725,10 @@ img {
 tr:hover {
     color: whitesmoke !important;
 }
+
+.table-line {
+    padding: 0;
+    margin: 10px 0px;
+    color: white !important;
+    background-color: white !important;
+}

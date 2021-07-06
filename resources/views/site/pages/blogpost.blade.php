@@ -16,20 +16,20 @@
    </ul>
  </div>
 </div>
-<div class="container">
+<div class="container blog-helper">
  <div class="row py-4">
-  <div class="col-5 p-0">
+  <div class="col-lg-5 col-md-12 col-sm-12  p-0">
    <div class="blog-img">
-    <img id='blog-img-one' src="/assets/img/3.jpg" alt="">
+    <img id='blog-img-one' src="/assets/blog_cover_img/{{$blogs->cover_image}}" alt="">
     
     <div id="slide-wrapper" class="img-slider">
      <img id="slider-left-blog" class="arrow" src="/assets/img/Drop_down_strelica_left-01.svg" alt="">
      <div id="slider">
-      <img class="thumbnail active-thumbnail" src="/assets/img/2.jpeg" alt="">
-      <img class="thumbnail" src="/assets/img/4.jpeg" alt="">
+      <img class="thumbnail active-thumbnail" src="/assets/blog_images/{{$blogs->images}}" alt="">
+      {{-- <img class="thumbnail" src="/assets/img/4.jpeg" alt="">
       <img class="thumbnail" src="/assets/img/5.jpg" alt="">
       <img class="thumbnail" src="/assets/img/5.jpg" alt="">
-      <img class="thumbnail" src="/assets/img/5.jpg" alt="">
+      <img class="thumbnail" src="/assets/img/5.jpg" alt=""> --}}
 
      </div>
      <img id="slider-right-blog" class="arrow" src="/assets/img/Drop_down_strelica_right-01.svg" alt="">
@@ -38,27 +38,28 @@
 
    </div>
   </div>
-  <div class="col-6">
+  <div class=" col-lg-6 col-md-12 col-sm-12 ">
    <div class="blog-text">
-    <h1>Valdanos, srce naše zajednice</h1>
-    <p>“Vatra hiljadugodišnjih maslinjaka nije zahvatila samo masline, već smo opekotine osjetili svi na svojoj duši. Izdržao je Valdanos mnogo nepravde u posljednja dva milenijuma. Siguran sam da ce milost Božija ponovo biti veća od nesreće koja ga je zadesila.”</p>
+    <h1>{{$blogs->title_mne}}</h1>
+    <p>{{$blogs->blog_mne}}</p>
     <div class="blog-links ">
      <ul class="position-absolute d-flex">
-      <li class="p-2">i</li>
-      <li class="p-2">i</li>
-      <li class="p-2">i</li>
-      <li class="p-2">i</li>
+      <li class="p-2"><img src='/assets/img/tweter.svg'></li>
+      <li class="p-2"><img src='/assets/img/facebook.svg'></li>
+      <li class="p-2"><img src='/assets/img/share.svg'></li>
+      <li class="p-2"><img src='/assets/img/mail.svg'></li>
      </ul>
     </div>
    </div>
   </div>
  </div>
  <div class="blog-video py-5">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WtcOFQrGrBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="{{$blogs->yt_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
  </div>
  <hr class="hr w-100">
- <div class="row">
-  <div class="col-4">
+ <div class="row mb-5">
+  <div class="col-lg-4 col-md-12 col-sm-12 col-sx-12">
            <a href="/blog">
     <div class="owl-carousel owl-theme drag-m" >
               <div class="item" > 

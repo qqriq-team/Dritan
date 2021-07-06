@@ -37,20 +37,27 @@
 
                                 </td>
                                 <td>
-                                    {{ $blog->lang_mne }} </br>
-                                    {{ $blog->lang_en }} </br>
-                                    {{ $blog->lang_al }}</br>
+
+                                    {{ $blog->lang_mne }} 
+                                    <hr class="table-line"></hr>
+                                    {{ $blog->lang_en }} 
+                                    <hr class="table-line"></hr>
+                                    {{ $blog->lang_al }}
                                 </td>
                                 <td>
-                                   MNE: {{ $blog->title_mne }} </br>
-                                   EN: {{ $blog->title_en }} </br>
-                                   AL: {{ $blog->title_al }} </br>
+                                   MNE: {{ $blog->title_mne }} 
+                                    <hr class="table-line"></hr>
+                                   EN: {{ $blog->title_en }} 
+                                    <hr class="table-line"></hr>
+                                   AL: {{ $blog->title_al }} 
                                 </td>
 
                                 <td>
-                                    {{ $blog->cover_text_mne }} </br>
-                                    {{ $blog->cover_text_mne }} </br>
-                                    {{ $blog->cover_text_mne }} </br>
+                                    {{ $blog->cover_text_mne }}
+                                    <hr class="table-line"></hr>
+                                    {{ $blog->cover_text_mne }} 
+                                    <hr class="table-line"></hr>
+                                    {{ $blog->cover_text_mne }} 
                                 </td>
                                 <td>
                                     <div class="blog-options">

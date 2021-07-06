@@ -27,7 +27,7 @@ return[
 'angazman3'=>"Na parlamentarnim izborima 30. avgusta 2020. godine Abazović kao nosilac koalicione liste ,,Crno na bijelo” osvaja 5,53% glasova ili 22.649 građana. Zajedno sa nosiocima druge dvije koalicione liste ,,Za budućnost Crne Gore”, Zdravkom Krivokapićem” i ,,Mir je naša nacija”, Aleksom Bečićem, 9. septembra 2020. potpisuje Sporazum, koji je sadržao principe na kojima će biti formirana buduća vlast. Nosioci tri opozicione liste su se u Sporazumu obavezali da će nova demokratska vlada poštovati Ustav i da neće pokretati nikakve inicijative ili postupke s ciljem izmene državne zastave, grba i himne, ali i da će nova demokratska vlada u Crnoj Gori odgovorno sprovoditi sve međunarodne obaveze koje je država preuzela, ojačati i unaprediti saradnju s NATO-om i brzo, u potpunosti i predano sprovesti sve reforme potrebne za punopravno članstvo Crne Gore u EU. U Sporazumu koji je sastavljen još na engleskom i njemačkom jeziku, navodi se i da će nova demokratska vlada u potpunosti depolitizovati ključne vladine institucije s ciljem obezbeđenja beskompromisne borbe protiv kriminala i korupcije. U Sporazumu se navodi i da nova vlada neće pokretati postupak za povlačenje priznanja nezavisnosti Kosova i da neće sprovoditi revanšizam na političkoj ili bilo kojoj drugoj osnovi, usvojiće i revidirati sve zakone u skladu s evropskim standardima s ciljem što brže integracije Crne Gore u EU i omogućiće manjinskim strankama učešće u vladi bez obzira imaju li parlamentarni status ili ne.",
 'angazman4'=>"Dr Dritan Abazović i koalicija „Crno na bijelo“ tvorci su ideje o Vladi eksperata („ekspertska Vlada“) koju su zagovarali tokom predizborne kampanje i nakon izbora, a koja podrazumijeva da predsjednik Vlade i ministri budu nestranačke ličnosti, a koji su u javnosti prepoznati kao osobe ostvare u svojoj struci. Dana 4. decembra 2020. godine, dr Dritan Abazović postao je potpredsjednik 42. Vlade Crne Gore i koordinator svih službi bezbjednosti Crne Gore. Inicijator je formiranja Nacionalnog savjeta za borbu protiv korupcije na visokom nivou, koji je formiran 11. februara 2021. godine, a on je izabran za predsjednika Savjeta. Dana 4. juna 2021. godine, na sjednici Vijeća za nacionalnu bezbjednost, dr Dritan Abazović imenovan je za predsjednika Biroa za operativnu koordinaciju, koji je zadužen za izvršavanje i realizaciju zaključaka Vijeća za nacionalnu bezbjednost, utvrđivanje zadataka obavještajnog sektora i koordinaciju aktivnosti organa iz tog sektora. U Vladi Crne Gore, potpredsjednik Abazović obavlja i sljedeće funkcije: - Predsjednik Savjeta za prava djeteta; - Predsjednik Savjeta za kontrolu biračkog spiska; - Predsjednik Komisije za politički system, unutrašnju i vanjsku politiku; - Zamjenik predsjednika Savjeza za NATO; - Član Vijeća za nacionalnu bezbjednost; - Član Savjeta za privatizaciju i kapitalne projekte; - Član Komisije za kadrovska i administrativna pitanja.",
 'istorijat'=>"Istorijat",
-'biografija'=>"Biografija",
+'biografija'=>"Bibliografija",
 'djetinjstvo' =>"Djetinjstvo",
 'obrazovanje'=>"Obrazovanje",
 'naucnirad'=>"Naučni rad",
@@ -39,11 +39,4 @@ return[
 'gradjanskiaktivizam' =>"Građanski aktivizam",
 'ploitickiaktivizam' => "Politički aktivizam",
 'globus' =>"Globus"
-
-
-
-
-
-
-
 ];

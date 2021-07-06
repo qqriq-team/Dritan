@@ -1,5 +1,5 @@
 
-<footer class="w-100">
+<footer class="w-100 ">
   <div class="footer w-100">
     <div class="container d-flex justify-content-between">
       <div class="social-footer">

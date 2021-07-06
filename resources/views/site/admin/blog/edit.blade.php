@@ -18,7 +18,7 @@
 
 <div class="w-100 px-5 mt-5">
     <div class="row justify-content-center">
-        <div class="tab-pane active table-responsive border-top userprof-tab" id="tab1">
+        <div class="tab-pane active table-responsive  userprof-tab" id="tab1">
             <div class="container">    
                 <form action="{{ route('blogs.update',[app()->getLocale(), $blog->id ]) }}" method="POST"
                     enctype="multipart/form-data">

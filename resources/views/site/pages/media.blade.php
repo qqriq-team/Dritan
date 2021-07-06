@@ -24,110 +24,31 @@
   <div class="tab-pane fade show  active" id="pills-aktivizam" role="tabpanel" aria-labelledby="pills-istorija-tab">
     <h1>Gradjanski aktivizam</h1>
     {{--  loop for blogs --}}
-    @foreach ($blogs as $blog)
-    @endforeach
     <div class="row">
+    @foreach ($blogs as $blog)
+
       <div class="col-lg-4 col-12 my-4">
         <a class="blog-link-space" href="{{route('showBlogsOnSite', [app()->getLocale(), $blog->id])}}">
         </a>
       <div class="owl-carousel owl-theme drag-m " >
 
               <div class="item" > 
-                  <img class="d-block w-100 drop-desk-img-m"src="/assets/img/9.png" alt="Slika">
+                  <img class="d-block w-100 drop-desk-img-m"src="/assets/blog_cover_img/{{$blog->cover_image}}" alt="Slika">
               </div>
 
                <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/9.png" alt="Slika">
+                  <img class="d-block w-100 drop-desk-img-m " src="/assets/blog_images/{{$blog->images}}" alt="Slika">
                </div>
 
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/1.png" alt="Slika">
-               </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/2.png" alt="Slika">
-               </div>
       </div>
      <div class="owl-bg">
-      <p class="p-2">Lorem, ipsum dolor.</p>
+      <p class="p-2">{{$blog->cover_text_mne}}</p>
      </div>
 
       </div>
-           <div class="col-lg-4 col-12 my-4">
-    <div class="owl-carousel owl-theme drag-m" >
+    @endforeach
 
-              <div class="item" > 
-                  <img class="d-block w-100 drop-desk-img-m"src="/assets/img/9.png" alt="Slika">
-              </div>
 
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/9.png" alt="Slika">
-               </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/1.png" alt="Slika">
-               </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/2.png" alt="Slika">
-               </div>
-      </div>
-     <div class="owl-bg">
-      <p class="p-2">Lorem, ipsum dolor.</p>
-     </div>
-
-      </div>
-           <div class="col-lg-4 col-12 my-4">
-    <div class="owl-carousel owl-theme drag-m" >
-
-              <div class="item" > 
-                  <img class="d-block w-100 drop-desk-img-m"src="/assets/img/9.png" alt="Slika">
-              </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/9.png" alt="Slika">
-               </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/1.png" alt="Slika">
-               </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/2.png" alt="Slika">
-               </div>
-      </div>
-     <div class="owl-bg">
-      <p class="p-2">Lorem, ipsum dolor.</p>
-     </div>
-      </div>
-     </div>
-     <div class="row pt-4">
-            <div class="col-lg-4 col-12 my-4">
-               <a href="">
-    <div class="owl-carousel owl-theme drag-m" >
-
-              <div class="item" > 
-                  <img class="d-block w-100 drop-desk-img-m"src="/assets/img/9.png" alt="Slika">
-              </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/9.png" alt="Slika">
-               </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/1.png" alt="Slika">
-               </div>
-
-               <div class="item">
-                  <img class="d-block w-100 drop-desk-img-m " src="/assets/img/2.png" alt="Slika">
-               </div>
-      </div>
-      </a>
-     <div class="owl-bg">
-      <p class="p-2">Lorem, ipsum dolor.</p>
-     </div>
-
-      </div>
      </div>
     </div>
     <div class="tab-pane fade" id="pills-politicki" role="tabpanel" aria-labelledby="pills-politicki-tab">
