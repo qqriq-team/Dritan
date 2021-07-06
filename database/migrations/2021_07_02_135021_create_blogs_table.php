@@ -15,12 +15,25 @@ class CreateBlogsTable extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
             $table->string('cover_image');
-            $table->text('cover_text');
-            $table->text('blog');
+            $table->string('images');
             $table->text('yt_link');
             $table->timestamps();
+            //mne
+            $table->string('lang_mne')->nullable();
+            $table->string('title_mne')->nullable();
+            $table->text('cover_text_mne');
+            $table->text('blog_mne');
+            // en
+            $table->string('lang_en')->nullable();
+            $table->string('title_en')->nullable();
+            $table->text('cover_text_en');
+            $table->text('blog_en');
+            //al
+            $table->string('lang_al')->nullable();
+            $table->string('title_al')->nullable();
+            $table->text('cover_text_al');
+            $table->text('blog_al');
         });
     }
 

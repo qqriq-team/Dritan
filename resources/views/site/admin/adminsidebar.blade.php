@@ -16,7 +16,7 @@
 @else
 <aside class="app-sidebar sidebar-scroll ps ps--active-y">
     <div class="main-sidebar-header  active"> 
-        <a class="desktop-logo logo-light active" href="">
+        <a class="desktop-logo logo-light active" href="/{{app()->getLocale()}}">
             <img src="/assets/img/Group 49.svg" class="main-logo p-4 w-100" alt="logo"></a> 
            
             </div>
@@ -30,9 +30,9 @@
         </div>
         <ul class="side-menu" id="side-menu">
           <!--  <li class="side-item side-item-category">Glavni meni</li> -->
-            <li class="slide "> <a class="side-menu__item " href=""><span id="dash" class="side-menu__label "><img src="/assets/img/ListaBlog.svg" class="p-1 mr-2" width="35px" alt="logo">Lista blogova</span></a> </li>
+            <li class="slide "> <a class="side-menu__item " href="{{route('blogs.index', app()->getLocale())}}"><span id="dash" class="side-menu__label "><img src="/assets/img/ListaBlog.svg" class="p-1 mr-2" width="35px" alt="logo">Lista blogova</span></a> </li>
 			
-            <li class="slide"><a class="side-menu__item" href="/{{app()->getLocale()}}/blogs/create"><span id="blog-add" class="side-menu__label"><img src="/assets/img/AddBlog.svg" class="p-1 mr-2" width="35px" /> Dodaj Blog </span></a></li>
+            <li class="slide"><a class="side-menu__item" href="{{route('blogs.create', app()->getLocale())}}"><span id="blog-add" class="side-menu__label"><img src="/assets/img/AddBlog.svg" class="p-1 mr-2" width="35px" /> Dodaj Blog </span></a></li>
 
 
 

@@ -23,11 +23,14 @@
 <div class="tab-content p-0" id="pills-tabContent">
   <div class="tab-pane fade show  active" id="pills-aktivizam" role="tabpanel" aria-labelledby="pills-istorija-tab">
     <h1>Gradjanski aktivizam</h1>
+    {{--  loop for blogs --}}
+    @foreach ($blogs as $blog)
+    @endforeach
     <div class="row">
-     <div class="col-lg-4 col-12 my-4">
-        <a class="blog-link-space" href="{{route('blog', app()->getLocale())}}">
+      <div class="col-lg-4 col-12 my-4">
+        <a class="blog-link-space" href="{{route('showBlogsOnSite', [app()->getLocale(), $blog->id])}}">
         </a>
-    <div class="owl-carousel owl-theme drag-m " >
+      <div class="owl-carousel owl-theme drag-m " >
 
               <div class="item" > 
                   <img class="d-block w-100 drop-desk-img-m"src="/assets/img/9.png" alt="Slika">
@@ -207,6 +210,7 @@
      <h1>Globus</h1>
     </div>
  </div>
+ 
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
