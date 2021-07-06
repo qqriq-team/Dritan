@@ -27,7 +27,8 @@ class BlogController extends Controller
     public function indexBlogsOnSite()
     {
         $blogs = Blog::all();
-        return view('site.pages.media', compact('blogs'));
+        $blog_images = BlogImages::get();
+        return view('site.pages.media', compact('blogs','blog_images'));
     }
     /**
      * Show specific blog on site.
@@ -38,8 +39,10 @@ class BlogController extends Controller
      */
     public function showBlogsOnSite($locale, $id)
     {
-        $blogs = Blog::find($id);
-        return view('site.pages.blogpost', compact('blogs'));
+        $blog = Blog::find($id);
+        $blogs = Blog::all();
+        $blog_images = BlogImages::get();
+        return view('site.pages.blogpost', compact('blogs','blog','blog_images'));
     }
 
     /**
