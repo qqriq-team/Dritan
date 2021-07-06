@@ -16,7 +16,7 @@
    </ul>
  </div>
 </div>
-<div class="container blog-helper">
+<div class="container">
  <div class="row py-4">
   <div class="col-lg-5 col-md-12 col-sm-12  p-0">
    <div class="blog-img">
@@ -25,9 +25,11 @@
     <div id="slide-wrapper" class="img-slider">
      <img id="slider-left-blog" class="arrow" src="/assets/img/Drop_down_strelica_left-01.svg" alt="">
      <div id="slider">
-      <img class="thumbnail active-thumbnail" src="/assets/blog_images/{{$blogs->images}}" alt="">
-      {{-- <img class="thumbnail" src="/assets/img/4.jpeg" alt="">
-      <img class="thumbnail" src="/assets/img/5.jpg" alt="">
+    <img class="thumbnail active-thumbnail" src="/assets/blog_cover_img/{{$blogs->cover_image}}" alt="">
+
+      <img class="thumbnail" src="/assets/blog_images/{{$blogs->images}}" alt="">
+       {{-- <img class="thumbnail" src="/assets/img/4.jpeg" alt=''> --}}
+     {{-- <img class="thumbnail" src="/assets/img/5.jpg" alt="">
       <img class="thumbnail" src="/assets/img/5.jpg" alt="">
       <img class="thumbnail" src="/assets/img/5.jpg" alt=""> --}}
 
@@ -54,8 +56,7 @@
   </div>
  </div>
  <div class="blog-video py-5">
-  <iframe width="560" height="315" src="{{$blogs->yt_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
+   <iframe width="560" height="315" src="{{$blogs->yt_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </div>
  <hr class="hr w-100">
  <div class="row mb-5">

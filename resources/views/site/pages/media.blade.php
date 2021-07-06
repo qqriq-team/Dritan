@@ -57,6 +57,7 @@
       <div class="row mx-0 px-0">
 
   @endif
+      </div>
     </div>
     <div class="tab-pane fade" id="pills-politicki" role="tabpanel" aria-labelledby="pills-politicki-tab">
     <div class="row">
