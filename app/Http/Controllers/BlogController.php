@@ -87,8 +87,8 @@ class BlogController extends Controller
 
         $blog = new Blog();
 
-        if (!empty($request->hasFile('cover_photo'))) {
-            $coverPhoto = $request->file('cover_photo');
+        if (!empty($request->file('cover_image'))) {
+            $coverPhoto = $request->file('cover_image');
             $name1 = $coverPhoto->getClientOriginalName();
             $extension1 = $coverPhoto->getClientOriginalExtension();
             $fileName1 = time() . '_' . Str::random(5) . '.' . $extension1;
@@ -214,8 +214,9 @@ class BlogController extends Controller
                 $image1->title = json_encode($data);
                 $blog->images = $image1->title;
                 
-                $blogs_images = BlogImages::where('blogs_id', $blog->id)->get();
-                $blogs_images->update(['images' => $fileName]);
+                // $blogs_images = BlogImages::where('blogs_id', $blog->id)->get();
+               $update_blog =  BlogImages::updateOrCreate(['blogs_id'=>$blog->id],['images' => $fileName]);
+               
             }
         }
         return redirect()->back()
