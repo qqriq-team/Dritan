@@ -28,7 +28,7 @@ class BlogController extends Controller
     {
         $blogs = Blog::all();
         $blog_images = BlogImages::get();
-        return view('site.pages.media', compact('blogs','blog_images'));
+        return view('site.pages.media', compact('blogs', 'blog_images'));
     }
     /**
      * Show specific blog on site.
@@ -42,7 +42,7 @@ class BlogController extends Controller
         $blog = Blog::find($id);
         $blogs = Blog::all();
         $blog_images = BlogImages::get();
-        return view('site.pages.blogpost', compact('blogs','blog','blog_images'));
+        return view('site.pages.blogpost', compact('blogs', 'blog', 'blog_images'));
     }
 
     /**
@@ -161,7 +161,7 @@ class BlogController extends Controller
         $categories = Category::get();
         $blog = Blog::where('id', $id)->first();
         $blogImages = BlogImages::where('blogs_id', $id)->get();
-        return view('site.admin.blog.edit', compact('blog', 'categories','blogImages'));
+        return view('site.admin.blog.edit', compact('blog', 'categories', 'blogImages'));
     }
 
     /**
@@ -178,7 +178,7 @@ class BlogController extends Controller
         $blog = Blog::where('id', $id)->first();
 
         if (!empty($request->hasFile('cover_photo'))) {
-  
+
             $coverPhoto = $request->file('cover_photo');
             $name1 = $coverPhoto->getClientOriginalName();
             $extension1 = $coverPhoto->getClientOriginalExtension();
@@ -212,11 +212,12 @@ class BlogController extends Controller
                 $data[] = $name;
                 $image1 = new Image;
                 $image1->title = json_encode($data);
-                $blog->images = $image1->title;
-                
-                // $blogs_images = BlogImages::where('blogs_id', $blog->id)->get();
-               $update_blog =  BlogImages::updateOrCreate(['blogs_id'=>$blog->id],['images' => $fileName]);
-               
+               BlogImages::create(
+                    [
+                        'images' => $fileName,
+                        'blogs_id' => $blog->id
+                    ]
+                );
             }
         }
         return redirect()->back()
