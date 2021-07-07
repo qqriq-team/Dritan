@@ -212,7 +212,7 @@ class BlogController extends Controller
                 $data[] = $name;
                 $image1 = new Image;
                 $image1->title = json_encode($data);
-               BlogImages::create(
+                BlogImages::updateOrCreate(
                     [
                         'images' => $fileName,
                         'blogs_id' => $blog->id
