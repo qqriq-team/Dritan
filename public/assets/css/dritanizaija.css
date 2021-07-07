@@ -3,3 +3,33 @@
     width: 100%;
     background-color: #d9c787;
 }
+.gallery {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+}
+.gallery > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+.gallery > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.horizontal-1 {
+    grid-column: span 2;
+}
+.vertical-1 {
+    grid-column: span 1;
+}
+.text-center {
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+}

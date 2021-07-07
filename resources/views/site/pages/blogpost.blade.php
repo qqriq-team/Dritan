@@ -75,13 +75,12 @@
         <hr class="hr w-100">
         <div class="row mb-5">
             @foreach ($blogs as $blog)
-
                 <div class="col-lg-4 col-md-12 col-sm-12 col-sx-12">
                     <a href="{{ route('indexBlogsOnSite', app()->getLocale()) }}">
                     </a>
                         <div class="owl-carousel owl-theme drag-m">
                             <div class="item">
-                                <img class="d-block w-100 drop-desk-img-m" src="/assets/blog_cover_img/{{ $blog->cover_images }}" alt="Slika">
+                                <img class="d-block w-100 drop-desk-img-m" src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
                             </div>
                             @foreach ($blog_images as $blog_image)
                                 

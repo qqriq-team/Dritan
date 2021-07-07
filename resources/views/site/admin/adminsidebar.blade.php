@@ -62,7 +62,7 @@
 $(document).ready(function () {
   let pathname = window.location.pathname;
 
-  if (pathname == '/mne/dashboard') {
+  if (pathname == '/mne/dashboard' ||pathname == '/mne/blogs' ) {
     $('#dash').addClass('active-slide-admin');
   }
   if (pathname == '/mne/blogs') {

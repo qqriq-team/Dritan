@@ -117,7 +117,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlFile1">Naslovna fotografija</label>
-                                <input type="file" name="cover_photo" class="form-control-file"
+                                <input type="file" name="cover_image" class="form-control-file"
                                     id="exampleFormControlFile1">
                             </div>
                         </div>
