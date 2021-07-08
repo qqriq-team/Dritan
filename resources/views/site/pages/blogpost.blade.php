@@ -21,6 +21,7 @@
     <div class="container">
         <div class="row py-4">
             <div class="col-lg-5 col-md-12 col-sm-12  p-0">
+                
                 <div class="blog-img">
                     <img id='blog-img-one' src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="">
 
@@ -68,16 +69,21 @@
             </div>
         </div>
         <div class="blog-video py-5">
-            <iframe width="560" height="315" src="{{ $blog->yt_link }}" title="YouTube video player" frameborder="0"
+            <iframe  height="315" src="{{ $blog->yt_link }}" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
         <hr class="hr w-100">
-        <div class="row mb-5">
+        <div class="row mb-7">
+                                    <?php
+                        $colcount = count($blogs);
+                        $i = 1;
+                        ?>
             @foreach ($blogs as $blog)
-                <div class="col-lg-4 col-md-12 col-sm-12 col-sx-12">
-                    <a href="{{ route('indexBlogsOnSite', app()->getLocale()) }}">
-                    </a>
+                <div class="col-lg-4 col-md-12 col-sm-12 col-sx-12 py-2">
+                                    <a class="blog-link-space"
+                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
+                                    </a>
                         <div class="owl-carousel owl-theme drag-m">
                             <div class="item">
                                 <img class="d-block w-100 drop-desk-img-m" src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
@@ -101,7 +107,11 @@
                         </div>
                    
                 </div>
-        </div>
+                      @if ($i++ % 3 == 0)
+                    </div>
+                    <div class="row ">
+
+                        @endif
         @endforeach
     </div>
     <script type="text/javascript">

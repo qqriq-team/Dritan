@@ -2,7 +2,7 @@
 return[
 // intro
 'intro1' => "“Kreće novi put evropske,",
-'intro2' => "građanske i",
+'intro2' => "građanske i ekološke",
 'intro3' => "Crne Gore ”",
 'biografija' => "Biografija",
 'media' => "Media",

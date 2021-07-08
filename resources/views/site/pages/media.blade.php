@@ -24,7 +24,7 @@
                 </ul>
             </div>
         </div>
-        <div class="container">
+        <div class="container ">
 
             <div class="tab-content p-0" id="pills-tabContent">
                 <div class="tab-pane fade show  active" id="pills-aktivizam" role="tabpanel"
@@ -37,7 +37,7 @@
                         ?>
                         @foreach ($blogs as $blog)
                             @if ($blog->categories_id == 1)
-                                <div class="col-lg-4 col-12 my-4">
+                                <div class="col-lg-4 col-md-6 col-12 my-4">
                                     <a class="blog-link-space"
                                         href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
                                     </a>
