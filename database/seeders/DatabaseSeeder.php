@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Languages;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -35,6 +36,21 @@ class DatabaseSeeder extends Seeder
         Category::create(
             [
                 'name' => 'Politički aktivizam'
+            ]
+        );
+        Languages::create(
+            [
+                'name' => 'MNE'
+            ]
+        );
+        Languages::create(
+            [
+                'name' => 'EN'
+            ]
+        );
+        Languages::create(
+            [
+                'name' => 'AL'
             ]
         );
     }
