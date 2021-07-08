@@ -1,3 +1,6 @@
+<?php
+use App\Models\Languages; ?>
+
 @extends('site.partials.header')
 @section('header_content')
     <div class="container-flud p-0 m-0">
@@ -36,39 +39,40 @@
                         $i = 1;
                         ?>
                         @foreach ($blogs as $blog)
-                            @if ($blog->categories_id == 1)
-                                <div class="col-lg-4 col-12 my-4">
-                                    <a class="blog-link-space"
-                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
-                                    </a>
-                                    <div class="owl-carousel owl-theme drag-m ">
+                            @php
+                                $languages = Languages::where('id', $blog->lang_id)->first();
+                            @endphp
+                            @if (app()->getLocale() == strtolower($languages->name))
+                                @if ($blog->categories_id == 1)
+                                    <div class="col-lg-4 col-12 my-4">
+                                        <a class="blog-link-space"
+                                            href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
+                                        </a>
+                                        <div class="owl-carousel owl-theme drag-m ">
 
-                                        <div class="item">
-                                            <img class="d-block w-100 drop-desk-img-m"
-                                                src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
+                                            <div class="item">
+                                                <img class="d-block w-100 drop-desk-img-m"
+                                                    src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
+                                            </div>
+
+                                            @foreach ($blog_images as $blog_image)
+                                                @if ($blog_image->blogs_id == $blog->id)
+                                                    <div class="item">
+                                                        <img class="d-block w-100 drop-desk-img-m "
+                                                            src="/assets/blog_images/{{ $blog_image->images }}"
+                                                            alt="Slika">
+                                                    </div>
+                                                @endif
+                                            @endforeach
+
+                                        </div>
+                                        <div class="owl-bg">
+
+                                            <p class="p-2">{{ $blog->cover_text }}</p>
                                         </div>
 
-                                        @foreach ($blog_images as $blog_image)
-                                            @if ($blog_image->blogs_id == $blog->id)
-                                                <div class="item">
-                                                    <img class="d-block w-100 drop-desk-img-m "
-                                                        src="/assets/blog_images/{{ $blog_image->images }}" alt="Slika">
-                                                </div>
-                                            @endif
-                                        @endforeach
-
                                     </div>
-                                    <div class="owl-bg">
-                                       @if(app()->getLocale() == "mne")
-                                       <p class="p-2">{{$blog->cover_text_mne}}</p>
-                                       @elseif(app()->getLocale() == "en")
-                                       <p class="p-2">{{$blog->cover_text_en}}</p>
-                                       @else
-                                       <p class="p-2">{{$blog->cover_text_al}}</p>
-                                       @endif
-                                    </div>
-
-                                </div>
+                                @endif
                             @endif
                         @endforeach
 
@@ -87,42 +91,44 @@
                         $i = 1;
                         ?>
                         @foreach ($blogs as $blog)
-                            @if ($blog->categories_id == 2)
-                                <div class="col-lg-4 col-12 my-4">
-                                    <a class="blog-link-space"
-                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
-                                    </a>
-                                    <div class="owl-carousel owl-theme drag-m">
+                            @php
+                                $languages = Languages::where('id', $blog->lang_id)->first();
+                            @endphp
+                            @if (app()->getLocale() == strtolower($languages->name))
+                                @if ($blog->categories_id == 2)
+                                    <div class="col-lg-4 col-12 my-4">
+                                        <a class="blog-link-space"
+                                            href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
+                                        </a>
+                                        <div class="owl-carousel owl-theme drag-m">
 
-                                        <div class="item">
-                                            <img class="d-block w-100 drop-desk-img-m"
-                                                src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
+                                            <div class="item">
+                                                <img class="d-block w-100 drop-desk-img-m"
+                                                    src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
+                                            </div>
+
+                                            @foreach ($blog_images as $blog_image)
+                                                @if ($blog_image->blogs_id == $blog->id)
+                                                    <div class="item">
+                                                        <img class="d-block w-100 drop-desk-img-m "
+                                                            src="/assets/blog_images/{{ $blog_image->images }}"
+                                                            alt="Slika">
+                                                    </div>
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                        <div class="owl-bg">
+
+
+                                            <p class="p-2">{{ $blog->cover_text }}</p>
+
                                         </div>
 
-                                        @foreach ($blog_images as $blog_image)
-                                            @if ($blog_image->blogs_id == $blog->id)
-                                                <div class="item">
-                                                    <img class="d-block w-100 drop-desk-img-m "
-                                                        src="/assets/blog_images/{{ $blog_image->images }}" alt="Slika">
-                                                </div>
-                                            @endif
-                                        @endforeach
                                     </div>
-                                    <div class="owl-bg">
-                                       @if(app()->getLocale() == "mne")
-                                       <p class="p-2">{{$blog->cover_text_mne}}</p>
-                                       @elseif(app()->getLocale() == "en")
-                                       <p class="p-2">{{$blog->cover_text_en}}</p>
-                                       @else
-                                       <p class="p-2">{{$blog->cover_text_al}}</p>
-                                       @endif
-                                    </div>
-
-                                </div>
 
 
                     </div>
-
+                    @endif
                     @endif
                     @endforeach
 

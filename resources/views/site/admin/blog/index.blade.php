@@ -1,3 +1,5 @@
+<?php
+use App\Models\Languages; ?>
 @extends('site.admin.adminapp')
 @section('content')
     <style>
@@ -19,7 +21,7 @@
                         <tr>
                             <th class='tr-admin'>Id </th>
                             <th class='tr-admin'>Fotografija</th>
-                            <th class='tr-admin'>Jezici</th>
+                            <th class='tr-admin'>Jezik</th>
                             <th class='tr-admin'>Naslov</th>
                             <th class='tr-admin'>Blog</th>
                             <th class='tr-admin'>Izmijeni/Obriši</th>
@@ -37,27 +39,21 @@
 
                                 </td>
                                 <td>
-
-                                    {{ $blog->lang_mne }} 
-                                    <hr class="table-line"></hr>
-                                    {{ $blog->lang_en }} 
-                                    <hr class="table-line"></hr>
-                                    {{ $blog->lang_al }}
+                                    @php
+                                        $languages = Languages::where('id', $blog->lang_id)->first();
+                                    @endphp
+                                    {{ $languages->name }}
                                 </td>
                                 <td>
-                                   MNE: {{ $blog->title_mne }} 
-                                    <hr class="table-line"></hr>
-                                   EN: {{ $blog->title_en }} 
-                                    <hr class="table-line"></hr>
-                                   AL: {{ $blog->title_al }} 
+                                    @if ($languages->id == $blog->lang_id)
+                                        {{ $blog->title }}
+                                    @endif
                                 </td>
 
                                 <td>
-                                    {{ $blog->cover_text_mne }}
-                                    <hr class="table-line"></hr>
-                                    {{ $blog->cover_text_mne }} 
-                                    <hr class="table-line"></hr>
-                                    {{ $blog->cover_text_mne }} 
+                                    @if ($languages->id == $blog->lang_id)
+                                        {{ $blog->cover_text }}
+                                    @endif
                                 </td>
                                 <td>
                                     <div class="blog-options">

@@ -6,6 +6,7 @@ use App\Http\Middleware\Language;
 use App\Models\Blog;
 use App\Models\BlogImages;
 use App\Models\Category;
+use App\Models\Languages;
 use Illuminate\Support\Str;
 use  Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
@@ -40,9 +41,10 @@ class BlogController extends Controller
     public function showBlogsOnSite($locale, $id)
     {
         $blog = Blog::find($id);
+        $languages = Languages::where('id', $blog->lang_id)->first();
         $blogs = Blog::all();
         $blog_images = BlogImages::get();
-        return view('site.pages.blogpost', compact('blogs', 'blog', 'blog_images'));
+        return view('site.pages.blogpost', compact('blogs', 'blog', 'blog_images', 'languages'));
     }
 
     /**
@@ -53,7 +55,8 @@ class BlogController extends Controller
     public function create()
     {
         $categories = Category::get();
-        return view('site.admin.blog.create', compact('categories'));
+        $languages = Languages::all();
+        return view('site.admin.blog.create', compact('categories', 'languages'));
     }
 
     /**
@@ -64,26 +67,6 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //mozda ce nam zatrebati
-        // $validator = Validator::make($request->all(), [
-        //     'images' => 'required',
-        //     'cover_photo' => 'required',
-        //     'yt_link' => 'required',
-        //     'title_mne' => 'required',
-        //     'title_en' => 'required',
-        //     'title_al' => 'required',
-        //     'cover_txt_mne' => 'required',
-        //     'cover_txt_en' => 'required',
-        //     'cover_txt_al' => 'required',
-        //     'body_mne'  => 'required',
-        //     'body_en'  => 'required',
-        //     'body_al'  => 'required',
-        // ]);
-        // if ($validator->fails()) {
-        //     return redirect()->back()
-        //         ->withErrors($validator)
-        //         ->withInput();
-        //     } 
 
         $blog = new Blog();
 
@@ -100,18 +83,11 @@ class BlogController extends Controller
 
         $blog->yt_link = $request->yt_link;
         $blog->categories_id = $request->cat_id;
-        $blog->lang_mne = $request->lang_mne;
-        $blog->lang_en = $request->lang_en;
-        $blog->lang_al = $request->lang_al;
-        $blog->title_mne = $request->title_mne;
-        $blog->title_en = $request->title_en;
-        $blog->title_al = $request->title_al;
-        $blog->cover_text_mne = $request->cover_text_mne;
-        $blog->cover_text_en = $request->cover_text_en;
-        $blog->cover_text_al = $request->cover_text_al;
-        $blog->blog_mne = $request->body_mne;
-        $blog->blog_en = $request->body_en;
-        $blog->blog_al = $request->body_al;
+        $blog->lang_id = $request->languages_id;
+        $blog->title = $request->title;
+        $blog->cover_text = $request->cover_text;
+        $blog->blog = $request->body;
+
         $blog->save();
 
         if (!empty($request->hasFile('images'))) {
@@ -158,10 +134,11 @@ class BlogController extends Controller
      */
     public function edit($locale, $id)
     {
-        $categories = Category::get();
+        $categories = Category::all();
+        $languages = Languages::all();
         $blog = Blog::where('id', $id)->first();
         $blogImages = BlogImages::where('blogs_id', $id)->get();
-        return view('site.admin.blog.edit', compact('blog', 'categories', 'blogImages'));
+        return view('site.admin.blog.edit', compact('blog', 'categories', 'blogImages', 'languages'));
     }
 
     /**
@@ -190,15 +167,10 @@ class BlogController extends Controller
         }
 
         $blog->yt_link = $request->yt_link;
-        $blog->lang_mne = $request->lang_mne;
-        $blog->lang_en = $request->lang_en;
-        $blog->lang_al = $request->lang_al;
-        $blog->title_mne = $request->title_mne;
-        $blog->title_en = $request->title_en;
-        $blog->title_al = $request->title_al;
-        $blog->cover_text_mne = $request->cover_text_mne;
-        $blog->cover_text_en = $request->cover_text_en;
-        $blog->cover_text_al = $request->cover_text_al;
+        $blog->lang_id = $request->languages_id;
+        $blog->title = $request->title;
+        $blog->cover_text = $request->cover_text;
+
         $blog->update();
 
         if (!empty($request->hasFile('images'))) {
