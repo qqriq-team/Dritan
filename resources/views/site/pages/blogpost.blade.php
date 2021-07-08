@@ -29,11 +29,11 @@
                         <div id="slider">
                             <img class="thumbnail active-thumbnail" src="/assets/blog_cover_img/{{ $blog->cover_image }}"
                                 alt="">
- 
+
                             @foreach ($blog_images as $blog_image)
-                                @if($blog_image->blogs_id == $blog->id)
-                            <img class="thumbnail" src="/assets/blog_images/{{ $blog_image->images }}" alt="">
-                           @endif
+                                @if ($blog_image->blogs_id == $blog->id)
+                                    <img class="thumbnail" src="/assets/blog_images/{{ $blog_image->images }}" alt="">
+                                @endif
                             @endforeach
 
 
@@ -46,16 +46,10 @@
             </div>
             <div class=" col-lg-6 col-md-12 col-sm-12 ">
                 <div class="blog-text">
-                  @if (app()->getLocale() == "mne")             
-                  <h1>{{ $blog->title_mne }}</h1>
-                  <p>{{ $blog->blog_mne }}</p>
-                  @elseif(app()->getLocale() == "en")
-                  <h1>{{ $blog->title_en }}</h1>
-                  <p>{{ $blog->blog_en }}</p>
-                  @else
-                  <h1>{{ $blog->title_al }}</h1>
-                  <p>{{ $blog->blog_al }}</p>
-                  @endif
+                    @if (app()->getLocale() == strtolower($languages->name))
+                        <h1>{{ $blog->title }}</h1>
+                        <p>{{ $blog->blog }}</p>
+                    @endif
                     <div class="blog-links ">
                         <ul class="position-absolute d-flex">
                             <li class="p-2"><img src='/assets/img/tweter.svg'></li>
@@ -75,34 +69,33 @@
         <hr class="hr w-100">
         <div class="row mb-5">
             @foreach ($blogs as $blog)
-                <div class="col-lg-4 col-md-12 col-sm-12 col-sx-12">
-                    <a href="{{ route('indexBlogsOnSite', app()->getLocale()) }}">
-                    </a>
+                @if (app()->getLocale() == strtolower($languages->name) && $blog->lang_id ==  $languages->id )
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-sx-12">
+                        <a href="{{ route('indexBlogsOnSite', app()->getLocale()) }}">
+                        </a>
                         <div class="owl-carousel owl-theme drag-m">
                             <div class="item">
-                                <img class="d-block w-100 drop-desk-img-m" src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
+                                <img class="d-block w-100 drop-desk-img-m"
+                                    src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
                             </div>
                             @foreach ($blog_images as $blog_image)
-                                
-                            <div class="item">
-                                <img class="d-block w-100 drop-desk-img-m " src="/assets/blog_images/{{ $blog_image->images }}" alt="Slika">
-                            </div>
+
+                                <div class="item">
+                                    <img class="d-block w-100 drop-desk-img-m "
+                                        src="/assets/blog_images/{{ $blog_image->images }}" alt="Slika">
+                                </div>
                             @endforeach
 
                         </div>
                         <div class="owl-bg">
-                            @if(app()->getLocale() == "mne")
-                            <p class="p-2">{{$blog->cover_text_mne}}</p>
-                            @elseif(app()->getLocale() == "en")
-                            <p class="p-2">{{$blog->cover_text_en}}</p>
-                            @else
-                            <p class="p-2">{{$blog->cover_text_al}}</p>
-                            @endif
+                            <p class="p-2">{{ $blog->cover_text }}</p>
+
                         </div>
-                   
-                </div>
+
+                    </div>
+                @endif
+            @endforeach
         </div>
-        @endforeach
     </div>
     <script type="text/javascript">
         let thumnails = document.getElementsByClassName("thumbnail");
