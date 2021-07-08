@@ -27,7 +27,7 @@ use App\Models\Languages; ?>
                 </ul>
             </div>
         </div>
-        <div class="container">
+        <div class="container ">
 
             <div class="tab-content p-0" id="pills-tabContent">
                 <div class="tab-pane fade show  active" id="pills-aktivizam" role="tabpanel"

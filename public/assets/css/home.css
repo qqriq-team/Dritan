@@ -5,7 +5,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.mb-7 {
+    margin-bottom: 100px;
+}
 body {
     padding: 0;
     margin: 0;
@@ -155,4 +157,8 @@ footer {
 
 .lang-footer li .active-language {
     color: #d9c787;
+}
+
+iframe {
+    width: 550px;
 }

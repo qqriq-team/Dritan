@@ -21,6 +21,7 @@
     <div class="container">
         <div class="row py-4">
             <div class="col-lg-5 col-md-12 col-sm-12  p-0">
+                
                 <div class="blog-img">
                     <img id='blog-img-one' src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="">
 
@@ -62,13 +63,18 @@
             </div>
         </div>
         <div class="blog-video py-5">
-            <iframe width="560" height="315" src="{{ $blog->yt_link }}" title="YouTube video player" frameborder="0"
+            <iframe  height="315" src="{{ $blog->yt_link }}" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
         <hr class="hr w-100">
-        <div class="row mb-5">
+        <div class="row mb-7">
+                                    <?php
+                        $colcount = count($blogs);
+                        $i = 1;
+                        ?>
             @foreach ($blogs as $blog)
+
                 @if (app()->getLocale() == strtolower($languages->name) && $blog->lang_id ==  $languages->id )
                     <div class="col-lg-4 col-md-4 col-sm-12 col-sx-12">
                         <a href="{{ route('indexBlogsOnSite', app()->getLocale()) }}">
@@ -91,6 +97,7 @@
                             <p class="p-2">{{ $blog->cover_text }}</p>
 
                         </div>
+
 
                     </div>
                 @endif

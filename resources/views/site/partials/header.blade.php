@@ -3,7 +3,7 @@
 <div class="container p-0">
  <div class="header  header-desktop">
   <div class="header-helper  d-flex justify-content-between">
-   <div class="logo-header pt-4 pl-0">
+   <div class="logo-header pt-4 pl-0 ml-md-3">
     <img class="logo-header-img " src="/assets/img/logo-D.svg" alt="">
       
    </div>
@@ -14,22 +14,23 @@
       <li class="px-4  pt-6"  id="dritanizam"><a href="/{{app()->getLocale()}}/dritanizam">{{ __('text.dritanizam') }}</a></li>
     </ul>
    </div>
-   <div class="header-btn pt-4">
-    <a href="" class="btn btn-header">Budi dio promjena</a>
+   <div class="header-btn pt-4 mr-md-3">
+    <a href="" class="btn btn-header ">Budi dio promjena</a>
    </div>
   </div>
  </div>
 
  <!--Header moble -->
  <div class="header-mobile">
-   <div class="d-flex">
-   <div class="header-btn-mobile">
-     <div class="header-toggle">
-    </div>
-   </div>
+   <div class="d-flex justify-content-between">
+
      <div class="header-mobile-logo">
      <img class="logo-header-img m-4" src="/assets/img/logo-D.svg" width="100%" alt="">
     </div>
+       <div class="header-btn-mobile">
+     <div class="header-toggle">
+    </div>
+   </div>
   </div>
       <div class="header-mobile-links">
         <ul>

@@ -17,7 +17,7 @@
 </div>
 <div class="container">
 
-<div class="tab-content" id="pills-tabContent">
+<div class="tab-content mb-7 " id="pills-tabContent">
   <div class="tab-pane fade show  active" id="pills-istorija" role="tabpanel" aria-labelledby="pills-istorija-tab">
 <ul
       class="nav w-100 nav-pills mb-3 m-auto d-flex justify-content-between timeline"
