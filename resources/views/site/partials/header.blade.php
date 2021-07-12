@@ -4,8 +4,9 @@
  <div class="header  header-desktop">
   <div class="header-helper  d-flex justify-content-between">
    <div class="logo-header pt-4 pl-0 ml-md-3">
+     <a href="/">
     <img class="logo-header-img " src="/assets/img/logo-D.svg" alt="">
-      
+      </a>
    </div>
    <div class="header-links">
     <ul class="d-flex m-0">
@@ -15,7 +16,7 @@
     </ul>
    </div>
    <div class="header-btn pt-4 mr-md-3">
-    <a href="" class="btn btn-header ">Budi dio promjena</a>
+    <a href="https://www.facebook.com/abazovicdritan/" class="btn btn-header ">Budi dio promjena</a>
    </div>
   </div>
  </div>

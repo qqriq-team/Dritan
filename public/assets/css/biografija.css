@@ -104,3 +104,21 @@ p {
 .clr-yellow {
     color: #d9c787;
 }
+
+.panel-num {
+    font: var(--unnamed-font-style-normal) normal normal 20px /
+        var(--unnamed-line-spacing-24) Libre Baskerville;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    font: normal normal normal 20px/24px Libre Baskerville;
+    letter-spacing: 0px;
+    color: #3c3c3c;
+    opacity: 1;
+}
+
+.mb-6 {
+    margin-bottom: 100px;
+}
+.owl-carousel .owl-item img {
+    height: 290px;
+}

@@ -170,6 +170,7 @@ class BlogController extends Controller
         $blog->lang_id = $request->languages_id;
         $blog->title = $request->title;
         $blog->cover_text = $request->cover_text;
+       // $blog->blog =$blog->blog;
 
         $blog->update();
 

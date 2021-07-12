@@ -7,7 +7,7 @@ return[
 'biografija' => "Biografija",
 'media' => "Media",
 'dritanizam' => "Dritanizacija",
-'promjena' => "Budi promjene",
+'promjena' => "Budi dio promjene",
 'text1'=>"“Put koji smo izabrali je težak ali pravičan",
 'text2' =>"i ne brinem, jer znam da ne koračam sam.”",
 'djetinjstvo1' => "Dr Dritan Abazović rođen je 25.12.1985. godine u Ulcinju.",
@@ -39,5 +39,41 @@ return[
 'tekstknjige1' =>"Lorem ipsum dolor sit amet, ex veri liberavisse duo. Vivendo qualisque voluptatum duo id. His omittam accusata at. Veri primis eum an, eu eos tota aliquip molestie, duo vide minimum efficiantur an. Ad mucius pertinacia incorrupte duo, alienum repudiare eu sed. Duo id debitis efficiantur, suavitate voluptatum adversarium ea cum. Erant assentior ea usu.",
 'gradjanskiaktivizam' =>"Građanski aktivizam",
 'ploitickiaktivizam' => "Politički aktivizam",
-'globus' =>"Globus"
+'globus' =>"Globus",
+'panel1' =>"GlGost spiker/ predavač na temu „Istočna Evropa“ , Koledž za umjetnost i društvene nauke, Institut za tehnologiju MSU Iligan, Filipiniobus",
+'panel2' =>"Predavač na Bilgi University, Instanbul, na temu “New concept of human security in sector of politics” – Istanbul, Turska (2015)",
+'panel3' =>"Predavač na 6th IAPSS Academic Conference, “Chalenge of global economy crisis”, montenegrian student of political science, University of Montenegro, (2014)",
+'panel4' =>"Panelista u stručnoj raspravi „Ljudska prava u Crnoj Gori - od referenduma do početka pregovora sa Evropskom unijom“, u organizaciji Skupštine Crne Gore i NVO „Građanska alijansa“. (2013)",
+'panel5' =>"Panelista na tribini “Evropska perspektiva” Gimnazija „Cetinje“ (2014)",
+'panel6' =>"Panelista na “European Youth Summit: 100 for the next 100 in the Danube region”, koji je organizovala Mreża Evropskog Foruma Alpbach iz Beča, Sarajevo 2014.",
+'panel7' =>"Panelista Regionalnog Evroatlantskog kampa “React”, React Alumni forum Alfa centar (2013)",
+'panel8' =>"Panelista Regionalnog Evroatlantskog kampa “React”, React Alumni forum Alfa centar (2014)",
+'panel9' =>"Panelista na temu “ Regionalne perspektive NATO integracija na Konferenciji “ NATO i Jugoistočna Evropa : Bosna i Hercegovina, Hrvatska i Srbija”, u Sarajevu (Bosna i Hercegovina ) (2014)",
+'panel10' =>"Panelista na Plenarnoj konferenciji Nacionalne konvencije o evropskoj integraciji Crne Gore 2013-2014, koja je održana u Skupštini CG 2014.",
+'panel11' =>"Panelista na debati “NATO, šta kažeš na to”, Montenegrian American Youth Alumni Association, UDG, (2014)",
+'panel12' =>"Panelista na Konferenciji ”Pravci razvoja politike socijalnog stanovanja i osiguranje prava na stan kroz Ustav Crne Gore“, u organizaciji Mreže za razvoj socijalnog stanovanja, Asocijacije za demokratski prosperitet – Zid, Unije slobodnih sindikata Crne Gore, UNO Libertask i organizacije Mladi Romi, Podgorica 26.02. 2015.",
+'konferencija1' =>"Učesnik Međunarodne konferencije u organizaciji Foruma za etničke odnose, Budva (2013)",
+'konferencija2' =>"Učesnik Regionalne Akademije za demokratiju “Reforma sektora bezbjednosti u Zapadnom Balkanu “ Škola demokratskog rukovođenja, u Podgorici ( Crna Gora )",
+'konferencija3' =>"Učesnik na panel diskusiji na temu: ,,Izbori i izborni programi 2012 - sustina ili forma”, u organizaciji NVO CGO, koja se održala 5. Maja 2014, u PR Centru",
+'konferencija4' =>"Učestvovao na konferenciji „Jubileji kao putokaz za sigurnu budućnost”, koju je organizovao Komunikacioni tim Savjeta za članstvo u NATO Vlade Crne Gore uz podršku Slovačke atlantske komisije od 26 do 28. juna 2014. godine u Herceg Novom",
+'konferencija5' =>"Učestvovao na Konferenciji OSCE PA “Election process in conflict areas”, Kijev, Ukrajina (2014)",
+'konferencija6' =>"Učestvovao na Konferenciji OSCE PA “Election process in conflict areas”, Tbilisi, Gruzija (2013)",
+'konferencija7' =>"Učesnik na konferenciji, Strateški forum Bled, u Bledu (Slovenija), (2014)",
+'konferencija8' =>"Učesnik na BSF Belgrade security forum, Beograd, (2013)",
+'skole1' =>"Regionalna akademija za demokratiju - ,,Reforma sektora bezbjednosti na Zapadnom Balkanu”, (modul I) februar 2013. godine održana u Subotici, Srbija.",
+'skole2' =>"Regionalna akademija za demokratiju - ,,Reforma sektora bezbjednosti na Zapadnom Balkanu”, (modul II) jul 2013. godine, održana u Zagrebu, Hrvatska.",
+'skole3' =>"Regionalna akademija za demokratiju - ,,Reforma sektora bezbjednosti na Zapadnom Balkanu”, (modul III) decembar 2013. godine održana u Draču, Albanija.",
+'skole4' =>"Regionalna akademija za demokratiju - U saradnji sa Centrom za međunarodne poslove iz Barselone (CIDOB), (modul IV) oktobar 2013. godine održana u Barseloni, Španija.",
+'skole5' =>"Škola mladih lidera iz oblasti politike, ekonomije, tehnologije i kulture, u sklopu YOUNG BSF - Strateški forum Bled, u Bledu (Slovenija), (2014)",
+'clanci1'=> "Abazović, Dritan (2014) Anatomija postmodernog morala, Znakovi vremena, Časopis za filozofiju, religiju, znanost i društvenu praksu, godina XVII, broj 63, Naučno-istraživački institut Ibn Sina, Sarajevo",
+'clanci2'=> "Abazović, Dritan (2013)Realpolitika i etika, Matica crnogorska, Časopis za društvena pitanja, nauku i kulturu, godina XIV, broj 54., ljeto 2013 Podgorica",
+'clanci3'=> "Abazović, Dritan (2012) Pojam dostojanstva u kontekstu savremenog društva, Znakovi vremena, Časopis za filozofiju, religiju, znanost i društvenu praksu, godina XV, dvobroj 57/58, Naučno-istraživački institut Ibn Sina, Sarajevo",
+'clanci4'=> "Abazović, Dritan (2014) Ideologija antiglobaliste, Ideologija antiglobalizma,časopis za nauku, kulturu i umjetnost „Dija“, Udruženje albanskih stvaraoca, br12/2014, god. XII",
+'clanci5'=> "Abazović, Dritan (2014) Etičko preispitivanje demokratije, Sarajevski žurnal za društvena pitanja (jesen/zima 2014), Fakultet političkih nauka, Univerzitet u Sarajevu, godište III, broj 1-2",
+'pogledaj' =>"Pogledaj, poslušaj, procijeni"
+
+
+
+
+
 ];
