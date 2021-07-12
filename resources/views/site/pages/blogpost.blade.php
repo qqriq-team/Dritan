@@ -76,7 +76,7 @@
             @foreach ($blogs as $blog)
 
                 @if (app()->getLocale() == strtolower($languages->name) && $blog->lang_id ==  $languages->id )
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-sx-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-sx-12 pb-4">
                         <a href="{{ route('indexBlogsOnSite', app()->getLocale()) }}">
                         </a>
                         <div class="owl-carousel owl-theme drag-m">
@@ -152,7 +152,8 @@
             nav: true,
             navigation: true,
             smartSpeed: 200,
-            dots: false
+            dots: false,
+            
         })
     </script>
 @endsection

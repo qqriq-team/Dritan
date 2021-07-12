@@ -21,7 +21,7 @@ use App\Models\Languages; ?>
                     <li class="nav-item aktivizam" role="presentation">
                         <a class="nav-link p-0 px-3" id="pills-globus-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-globus" type="button" role="tab" aria-controls="pills-globus"
-                            aria-selected="false">{{ __('text.globus') }}</a>
+                            aria-selected="false">{{ __('text.pogledaj') }}</a>
                     </li>
 
                 </ul>
@@ -33,7 +33,7 @@ use App\Models\Languages; ?>
                 <div class="tab-pane fade show  active" id="pills-aktivizam" role="tabpanel"
                     aria-labelledby="pills-istorija-tab">
                     {{-- loop for blogs --}}
-                    <div class="row">
+                    <div class="row mb-6">
                         <?php
                         $colcount = count($blogs);
                         $i = 1;
@@ -127,7 +127,6 @@ use App\Models\Languages; ?>
                                     </div>
 
 
-                    </div>
                     @endif
                     @endif
                     @endforeach
@@ -141,7 +140,17 @@ use App\Models\Languages; ?>
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-globus" role="tabpanel" aria-labelledby="pills-globus-tab">
-                <h1>Globus</h1>
+                <div class="row mb-6">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-sx-12 my-4 media-yt ">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/diwEOWFZmi8?" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                         <div class="col-lg-4 col-md-6 col-sm-12 col-sx-12 my-4 media-yt">
+                        <iframe width="100%%" height="315" src="https://www.youtube.com/embed/diwEOWFZmi8?" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                         <div class="col-lg-4 col-md-6 col-sm-12 col-sx-12 my-4 media-yt">
+                        <iframe width="100%%" height="315" src="https://www.youtube.com/embed/diwEOWFZmi8?" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
 

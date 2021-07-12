@@ -74,13 +74,37 @@ body {
     width: 95%;
     float: right;
 }
+.navbar-homepage-helper {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
 .homepage {
-    background-image: url("/assets/img/Homepage-cover-v5.png");
+    /* background-image: url("/assets/img/Homepage-cover-v5.png"); */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
+}
+#slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+#slideshow > div img {
+    object-fit: cover;
+
+    width: 100%;
+    height: 100vh;
 }
 .logo {
     width: 10%;
@@ -91,7 +115,7 @@ body {
     height: 100%;
 }
 .nav-links {
-    width: 90%;
+    /* width: 90%; */
 }
 .nav-links ul {
     width: 70%;
@@ -161,4 +185,91 @@ footer {
 
 iframe {
     width: 550px;
+}
+
+.w-20 {
+    width: 20%;
+}
+.w-0 {
+    width: 0%;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+.video-container-open {
+    height: 70%;
+    opacity: 1 !important;
+}
+.video-container {
+    top: 12%;
+    right: 4.5%;
+    width: 14%;
+    /* height: 70%; */
+    /* background: #ffffff 0% 0% no-repeat padding-box; */
+    opacity: 0;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.video-wrapper {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+.video {
+    z-index: 22;
+}
+.video iframe {
+    width: 118px;
+    height: 81px;
+}
+.video-font {
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #2c6d88;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+.ytp-title-enable-channel-logo .ytp-title {
+    display: none !important;
+}
+.html5-video-player a {
+    display: none !important;
+}
+.ytp-title-text {
+    display: none !important;
+}
+.ytp-title-channel-logo {
+    display: none !important;
+}
+.date-video {
+    position: absolute;
+    left: 13%;
+    bottom: 5%;
+    font-size: 13px !important;
+    margin: 0 !important;
+}
+.date-video p {
+    font-size: 13px !important;
+}
+.blur-bg {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* filter: blur(20px); */
+    background: white;
+    opacity: 0.7;
+}
+
+.more-link {
+    position: absolute;
+    bottom: 2%;
+    left: 5.5%;
+}
+.more-link a {
+    font-size: 11px;
 }
