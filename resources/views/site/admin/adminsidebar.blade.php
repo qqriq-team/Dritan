@@ -31,10 +31,9 @@
         <ul class="side-menu" id="side-menu">
           <!--  <li class="side-item side-item-category">Glavni meni</li> -->
             <li class="slide "> <a class="side-menu__item " href="{{route('blogs.index', app()->getLocale())}}"><span id="dash" class="side-menu__label "><img src="/assets/img/ListaBlog.svg" class="p-1 mr-2" width="35px" alt="logo">Lista blogova</span></a> </li>
-			
-            <li class="slide"><a class="side-menu__item" href="{{route('blogs.create', app()->getLocale())}}"><span id="blog-add" class="side-menu__label"><img src="/assets/img/AddBlog.svg" class="p-1 mr-2" width="35px" /> Dodaj Blog </span></a></li>
-
-
+            <li class="slide"><a class="side-menu__item" href="{{route('blogs.create', app()->getLocale())}}"><span id="blog-add" class="side-menu__label"><img src="/assets/img/AddBlog.svg" class="p-1 mr-2" width="35px" /> Dodaj blog </span></a></li>
+            <li class="slide "> <a class="side-menu__item " href="{{route('videos.index', app()->getLocale())}}"><span id="videos-list" class="side-menu__label "><img src="/assets/img/ListaBlog.svg" class="p-1 mr-2" width="35px" alt="logo">Lista videa</span></a> </li>
+            <li class="slide"><a class="side-menu__item" href="{{route('videos.create', app()->getLocale())}}"><span id="videos-add" class="side-menu__label"><img src="/assets/img/AddBlog.svg" class="p-1 mr-2" width="35px" /> Dodaj video </span></a></li>
 
 
         </ul>
@@ -71,13 +70,12 @@ $(document).ready(function () {
   if (pathname == '/mne/blogs/create') {
     $('#blog-add').addClass('active-slide-admin');
   }
-  if (pathname == '/cars/create') {
-    $('#add-car').addClass('active-slide-admin');
+  if (pathname == '/mne/videos') {
+    $('#videos-list').addClass('active-slide-admin');
   }
-  if (pathname == '/admin/vehicles') {
-    $('#card-list').addClass('active-slide-admin');
+  if (pathname == '/mne/videos/create') {
+    $('#videos-add').addClass('active-slide-admin');
   }
-
 });
 </script>
 

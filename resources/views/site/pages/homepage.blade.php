@@ -64,13 +64,15 @@
       <div class="video-holder w-100 p-2">
         <div class="video w-100 p-2">
           <div class="row">
+            @foreach ($videos as $video)
             <div class="col-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/diwEOWFZmi8?" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+              <iframe width="100%" height="315" src="{{$video->yt_link}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
             </div>
             <div class="col-6 position-relative">
-              <p class="video-font">Naslov za video</p>
-              <p class="date-video">20.01.2021.</p>
+              <p class="video-font">{{$video->naslov}}</p>
+              {{-- <p class="date-video">20.01.2021.</p> --}}
             </div>
+            @endforeach
 
           </div>
 

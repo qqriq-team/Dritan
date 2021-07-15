@@ -27,11 +27,7 @@
                         <div class="pb-5">
                             <select class="categories form-control" name="cat_id" id="cat_id">
                                 @foreach ($categories as $category)
-                                    @if ($category->id == $blog->categories_id)
-                                        <option name="cat_name" id="cat_name" value="{{ $category->id }}">
-                                            {{ $category->name }}</option>
-                                    @endif
-                                    <option name="cat_name" id="cat_name" value="{{ $category->id }}">
+                                    <option name="cat_name" id="cat_name" value="{{ $category->id }}" @if ($category->id == $blog->categories_id) selected @endif>
                                         {{ $category->name }}</option>
                                 @endforeach
                             </select>
@@ -40,12 +36,9 @@
                         <div class="pb-5">
                             <select class="categories form-control" name="languages_id" id="languages_id">
                                 @foreach ($languages as $lang)
-                                    @if ($lang->id == $blog->lang_id)
-                                        <option name="lang" id="lang" value="{{ $lang->id }}"> {{ $lang->name }}
-                                        </option>
-                                    @endif
-                                    <option name="lang" id="lang" value="{{ $lang->id }}">
-                                        {{ $lang->name }}</option>
+                                    <option name="lang" id="lang" value="{{ $lang->id }}" @if ($lang->id == $blog->lang_id) selected @endif>
+                                        {{ $lang->name }}
+                                    </option>
                                 @endforeach
                             </select>
 

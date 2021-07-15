@@ -141,15 +141,11 @@ use App\Models\Languages; ?>
             </div>
             <div class="tab-pane fade" id="pills-globus" role="tabpanel" aria-labelledby="pills-globus-tab">
                 <div class="row mb-6">
+                    @foreach ($videos as $video)
                     <div class="col-lg-4 col-md-6 col-sm-12 col-sx-12 my-4 media-yt ">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/diwEOWFZmi8?" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        <iframe width="100%" height="315" src="{{$video->yt_link}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                     </div>
-                         <div class="col-lg-4 col-md-6 col-sm-12 col-sx-12 my-4 media-yt">
-                        <iframe width="100%%" height="315" src="https://www.youtube.com/embed/diwEOWFZmi8?" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                    </div>
-                         <div class="col-lg-4 col-md-6 col-sm-12 col-sx-12 my-4 media-yt">
-                        <iframe width="100%%" height="315" src="https://www.youtube.com/embed/diwEOWFZmi8?" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
