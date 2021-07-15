@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\BlogImages;
 use App\Models\Category;
 use App\Models\Languages;
+use App\Models\Videos;
 use Illuminate\Support\Str;
 use  Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
@@ -28,8 +29,9 @@ class BlogController extends Controller
     public function indexBlogsOnSite()
     {
         $blogs = Blog::all();
+        $videos = Videos::all();
         $blog_images = BlogImages::get();
-        return view('site.pages.media', compact('blogs', 'blog_images'));
+        return view('site.pages.media', compact('blogs', 'blog_images','videos'));
     }
     /**
      * Show specific blog on site.

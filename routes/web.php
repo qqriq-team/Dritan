@@ -3,11 +3,11 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogImageController;
-use App\Http\Controllers\HomeSiteController;
-use App\Http\Controllers\SitePagesController;
+use App\Http\Controllers\VideosController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +29,14 @@ Route::get('/setLocaleRout/{lang}', function ($lang) {
 })->name('setLocaleRout');
 
 Route::prefix('{lang}')->middleware('setlocale')->group(function () {
-  Route::get('/', [HomeSiteController::class, 'index']);
+  Route::get('/', function () {
+    return view("site.pages.homepage");
+  });
   Route::view('/biografija', 'site.pages.biografija');
-  // Route::view('/media', 'site.pages.media');
   Route::view('/dritanizam', 'site.pages.dritanizam');
-  Route::view('/dashboard', 'site.admin.dashboard');
   Route::resource('blogs', 'BlogController');
+  Route::resource('videos', 'VideosController');
+  Route::get('/', [VideosController::class,'indexOnHomePage']);
   Route::resource('blogimages', 'BlogImageController');
   Route::get('/blogs/destroy/{id}', [BlogController::class, 'destroy']);
   Route::post('/blogs/photo/delete/{id}', [BlogController::class, 'deletePhoto']);
@@ -42,7 +44,6 @@ Route::prefix('{lang}')->middleware('setlocale')->group(function () {
   Route::get('/media/{id}', [BlogController::class, 'showBlogsOnSite'])->name('showBlogsOnSite');
   Auth::routes();
   Route::group(['middleware' => 'admin'], function () {
-  Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
   });
 });
-
