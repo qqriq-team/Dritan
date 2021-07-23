@@ -9,20 +9,21 @@ use App\Models\Languages; ?>
             <div class="container-nav-media m-auto">
                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item aktivizam" role="presentation">
+                        <a class="nav-link p-0 px-3" id="pills-globus-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-globus" type="button" role="tab" aria-controls="pills-globus"
+                            aria-selected="true">{{ __('text.pogledaj') }}</a>
+                    </li>
+                    <li class="nav-item aktivizam" role="presentation">
                         <a class="nav-link p-0 pl-0 pr-3 active" id="pills-aktivizam-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-aktivizam" type="button" role="tab" aria-controls="pills-aktivizam"
-                            aria-selected="true">{{ __('text.gradjanskiaktivizam') }}</a>
+                            aria-selected="false">{{ __('text.gradjanskiaktivizam') }}</a>
                     </li>
                     <li class="nav-item aktivizam" role="presentation">
                         <a class="nav-link p-0 px-3" id="pills-politicki-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-politicki" type="button" role="tab" aria-controls="pills-politicki"
                             aria-selected="false">{{ __('text.ploitickiaktivizam') }}</a>
                     </li>
-                    <li class="nav-item aktivizam" role="presentation">
-                        <a class="nav-link p-0 px-3" id="pills-globus-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-globus" type="button" role="tab" aria-controls="pills-globus"
-                            aria-selected="false">{{ __('text.pogledaj') }}</a>
-                    </li>
+
 
                 </ul>
             </div>
