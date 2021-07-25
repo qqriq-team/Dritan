@@ -19,7 +19,7 @@ class VideosController extends Controller
     }
     public function indexOnHomePage()
     {
-        $videos = Videos::all();
+        $videos = Videos::orderBy('id', 'DESC')->paginate(5);
         return view('site.pages.homepage', compact('videos'));
     }
     /**
