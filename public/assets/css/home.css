@@ -198,12 +198,12 @@ iframe {
     white-space: nowrap;
 }
 .video-container-open {
-    height: 70%;
+    height: 60%;
     opacity: 1 !important;
 }
 .video-container {
     top: 12%;
-    right: 3.8%;
+    right: 12%;
     width: 14%;
     /* height: 70%; */
     /* background: #ffffff 0% 0% no-repeat padding-box; */
@@ -269,7 +269,7 @@ iframe {
     opacity: 0.7;
 }
 .h-22 {
-    height: 2200px;
+    height: 550px;
 }
 
 .more-link {
@@ -453,5 +453,11 @@ iframe {
     }
     .mobile-img-home {
         height: 100% !important;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .homepage-text h1 {
+        color: white !important;
     }
 }

@@ -86,7 +86,7 @@ use App\Models\Languages; ?>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-politicki" role="tabpanel" aria-labelledby="pills-politicki-tab">
-                    <div class="row">
+                    <div class="row pb-4">
                         <?php
                         $colcount = count($blogs);
                         $i = 1;
