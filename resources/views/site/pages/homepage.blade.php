@@ -121,7 +121,7 @@
         </div>
       </div>
   </div>
-     <div class="languages-mobile ">
+     <div class="languages-mobile mobile">
     <ul class="d-flex">
      <li class="px-2 active-language">MNE</li>
      <li class="px-2">AL</li>

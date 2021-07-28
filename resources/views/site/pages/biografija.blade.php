@@ -64,7 +64,7 @@
           aria-controls="pills-obrazovanje"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/dritan2.png" alt="" />
+          <img class="round-img" src="/assets/img/obrazovanje.jpg" alt="" />
           <div class="circle"></div>
           <p class="position-absolute">{{ __('text.obrazovanje') }}</p>
           
@@ -81,7 +81,7 @@
           aria-controls="pills-nauka"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/dritan5.png" alt="" />
+          <img class="round-img" src="/assets/img/dritan-slika-1.jpg" alt="" />
           <div class="circle"></div>
           <p class="position-absolute">{{ __('text.naucnirad') }}</p>
 
