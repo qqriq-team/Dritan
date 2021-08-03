@@ -489,6 +489,9 @@ iframe {
         right: 7.5%;
         width: 18.5%;
     }
+    .h-22 {
+        height: 600px;
+    }
 }
 @media screen and (width: 1280px) and (height: 800px) {
     .video-container {
