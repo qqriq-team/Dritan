@@ -100,8 +100,8 @@
   </div>
   <div class="video-container video-mobile position-absolute">
     <div class="blur-bg"></div>
-      <div class="video-holder w-100 p-2">
-        <div class="video w-100">
+      <div class="video-holder w-98 p-2">
+        <div class="video w-98">
           <div class="row p-2">
 
             @foreach ($videos as $video)
