@@ -13,6 +13,12 @@ h4 {
     padding-right: 2rem;
     padding-bottom: 2rem;
 }
+.pt-6-h {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
 .header-helper {
     height: 100%;
 }
@@ -28,6 +34,21 @@ h4 {
 }
 .logo-header-img {
     margin-top: 26%;
+}
+.btn-header-2 {
+    background-color: transparent;
+    border-radius: 0 !important;
+    color: #d9c787;
+    padding: 0.5rem 2rem;
+    margin-top: 12%;
+    border: 2px solid #d9c787;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.btn-header-2:hover {
+    color: white;
+    background-color: #d9c787;
+    border: 2px solid white;
 }
 .btn-header {
     background-image: linear-gradient(to right, #2c6d88, #3285a7);

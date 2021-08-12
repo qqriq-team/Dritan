@@ -7,7 +7,7 @@ return[
 'biografija' => "Biografija",
 'media' => "Media",
 'dritanizam' => "Dritanizacija",
-'promjena' => "Budi dio promjene",
+'promjena' => "Budi relaksiran",
 'text1'=>"“Put koji smo izabrali je težak ali pravičan",
 'text2' =>"i ne brinem, jer znam da ne koračam sam.”",
 'djetinjstvo1' => "Dr Dritan Abazović rođen je 25.12.1985. godine u Ulcinju.",

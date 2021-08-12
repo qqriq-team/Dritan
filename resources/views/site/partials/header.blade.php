@@ -10,13 +10,13 @@
    </div>
    <div class="header-links">
     <ul class="d-flex m-0">
-      <li class="px-4  pt-6"  id="biografija"><a href="/{{app()->getLocale()}}/biografija">{{ __('text.biografija') }}</a></li>
-      <li class="px-4  pt-6"  id="media"><a href="/{{app()->getLocale()}}/media">{{ __('text.media') }}</a></li>
-      <li class="px-4  pt-6"  id="dritanizam"><a href="/{{app()->getLocale()}}/dritanizam">{{ __('text.dritanizam') }}</a></li>
+      <li class="px-4  pt-6-h"  id="biografija"><a href="/{{app()->getLocale()}}/biografija">{{ __('text.biografija') }}</a></li>
+      <li class="px-4  pt-6-h"  id="media"><a href="/{{app()->getLocale()}}/media">{{ __('text.media') }}</a></li>
+      <li class="px-4  pt-6-h"  id="dritanizam"><a href="/{{app()->getLocale()}}/dritanizam">{{ __('text.dritanizam') }}</a></li>
     </ul>
    </div>
    <div class="header-btn pt-4 mr-md-3">
-    <a href="https://www.facebook.com/abazovicdritan/" class="btn btn-header ">Budi dio promjena</a>
+    <a href="https://www.facebook.com/abazovicdritan/" class="btn btn-header-2 ">Budi relaksiran</a>
    </div>
   </div>
  </div>

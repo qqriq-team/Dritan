@@ -122,5 +122,9 @@ p {
 }
 .owl-carousel .owl-item img {
     object-fit: cover;
-    height: 290px;
+    /* height: 290px; */
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #d9c787 !important;
 }
