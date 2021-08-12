@@ -5,8 +5,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+.my-container {
+    width: 100%;
+    height: auto;
+}
 .mb-7 {
     margin-bottom: 100px;
+}
+.py-5 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
 }
 body {
     padding: 0;
@@ -167,7 +175,7 @@ ul li {
 }
 footer {
     height: 70px;
-    position: fixed;
+    /* position: fixed; */
     background-color: #2c6d88;
     z-index: 99999;
     top: 93%;
@@ -277,7 +285,7 @@ iframe {
 
 .more-link {
     position: absolute;
-    bottom: 3%;
+    bottom: 7%;
     left: 5.5%;
 }
 .more-link a {
@@ -292,10 +300,206 @@ iframe {
 .desktop {
     display: block;
 }
+.bg-black {
+    background-color: #1d1d1d;
+}
+.bg-black-2 {
+    background-color: black !important;
+}
+.box {
+    margin-right: 35%;
+    float: right;
+    text-align: end;
+}
+.box h2 {
+    font-size: 28px !important;
+    color: white;
+    font: normal normal medium 28px/33px Roboto;
+}
+.box h1 {
+    font-size: 64px !important;
+    color: #bcde7b;
+    font: normal normal 900 64px/32px Roboto;
+}
+.box-h3 {
+    font-weight: 300;
+    font: normal normal normal 28px/32px Roboto;
+}
+.box a h3 {
+    font-size: 24px;
+    color: white !important;
+}
+.bg-green {
+    background-color: #6e9c8c;
+}
+.btn-yt {
+    border: 1px solid #6e9c8c;
+}
+.box-2 {
+    margin-left: 35%;
+}
+
+.box-2 h1 {
+    font-size: 64px;
+    color: white;
+    font: normal normal 900 64px/74px Roboto;
+    letter-spacing: 0px;
+}
+.box-2-h5-text {
+    color: white;
+    font-size: 21px;
+    font-weight: 400;
+}
+.box-2-h5 {
+    color: #d9c787 !important;
+    font-size: 28px;
+    font: normal normal medium 28px/74px Roboto;
+}
+.bg-yellow {
+    background-image: linear-gradient(90deg, #b4ab7b 0%, #d9c787 100%);
+}
+.video-2 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+}
+.video-2 iframe {
+    width: 65% !important;
+    height: 65vh !important;
+    margin: auto;
+}
+.iq-left {
+    /* background-color: #e6e6e6; */
+}
+.icon-r {
+    width: 80px;
+    height: 80px;
+    background-color: #d9c787;
+    margin: 5px;
+}
+.bg-img {
+    background-image: url("../img/Zalaganje-Pozadinska-fotografija-desktop (1).jpg");
+    background-position: center;
+    background-size: cover;
+}
+.my-container {
+    background-image: linear-gradient(90deg, #638c9d 0%, #0b99ce 100%);
+}
+.twitter-timeline {
+    margin: auto;
+}
+.twit-box h4 {
+    font: normal normal medium 28px/33px Roboto;
+    color: #2c6d88;
+    text-align: right;
+    font-size: 28px;
+}
+.twit-box h1 {
+    font: normal normal 900 64px/80px Roboto;
+    letter-spacing: 0px;
+    color: #d9c787;
+    text-align: right;
+}
+.twit-box p {
+    font: normal normal normal 28px/32px Roboto;
+    color: #2c6d88;
+    text-align: right;
+}
+.t-btn {
+    border: 1px solid #55acee;
+    width: 320px;
+    float: right;
+}
+.t-btn p {
+    color: #55acee;
+    font: normal normal medium 21px/32px Roboto;
+}
+.bg-grey {
+    background-color: #e6e6e6;
+}
+.bg-blue {
+    background-image: linear-gradient(90deg, #2c6d88 0%, #328fb5 100%);
+}
+.iq-text-left {
+    margin: auto;
+}
+.iq-text-left h4 {
+    font: normal normal medium 35px/41px Roboto;
+    color: #838383;
+    text-align: right;
+}
+.iq-text-left h1 {
+    font: normal normal 900 82px/32px Roboto;
+    text-align: right;
+    color: #000000;
+}
+.mozak-left {
+    width: 49%;
+    height: auto;
+}
+.iq-p {
+    text-align: left;
+    font: normal normal normal 18px/28px Roboto;
+    color: white;
+    margin: auto;
+}
+.mozak-right {
+    width: 50%;
+}
+.p-7 {
+    padding-top: 7rem !important;
+    padding-bottom: 4rem !;
+}
+.pt-7 {
+    padding-top: 7rem;
+}
+.rukapravde {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+.p-helper {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+}
+.btn-yt:hover {
+    background-color: #6e9c8c;
+    text-decoration: none;
+}
+.horizontal-line {
+    width: 60%;
+    height: 12px;
+    background-color: #2c6d88;
+    margin: 4rem auto !important;
+}
+.bg-grey-2 {
+    background-color: #fafafa;
+}
+.iq-right {
+    width: 100%;
+    height: 100%;
+}
+.iq-left {
+    height: 100%;
+    width: 100%;
+}
+.mr-9 {
+    margin-right: 1.5rem !important;
+}
+
+/*responzivnost*/
 
 @media screen and (max-width: 950px) {
     .nav-desktop {
         display: none !important;
+    }
+
+    .m-sm-8 {
+        margin: 40px;
+    }
+    .mr-9 {
+        margin-right: 0rem !important;
     }
     .desktop {
         display: none;
@@ -312,7 +516,7 @@ iframe {
     .homepage-text h1 {
         color: black !important;
         font: normal normal normal 24pt/38px Libre Baskerville;
-        top: 55%;
+        top: 58%;
     }
     .nav-mobile {
         display: block !important;
@@ -499,4 +703,99 @@ iframe {
         right: 5%;
         width: 20%;
     }
+}
+/*2 responzivnost za tablete-mobilne*/
+@media (max-width: 992px) {
+    .video-2 iframe {
+        width: 95% !important;
+    }
+    .box-2-h5-text {
+        font-size: 14pt !important;
+    }
+    .box-2 h1 {
+        font-size: 28pt !important;
+        line-height: 30px !important;
+    }
+    .box-2-h5 {
+        font-size: 16pt !important;
+    }
+    .box {
+        text-align: center;
+        margin-right: 0% !important;
+        float: none;
+    }
+    .box h1 {
+        font-size: 42px !important;
+    }
+    .box .p-7 {
+        padding-top: 0 !important;
+    }
+    .p-sm-0 {
+        padding: 0 !important;
+    }
+    .m-sm-0 {
+        margin: 0 !important;
+    }
+    .btn-yt {
+        width: 70%;
+        margin: auto;
+    }
+    .video-2 {
+        height: 35vh !important;
+    }
+    .video-2 iframe {
+        height: 25vh !important;
+    }
+    .box-2 {
+        margin-left: 5%;
+        z-index: 4;
+        position: relative;
+    }
+    .rukapravde {
+        opacity: 1;
+        position: relative !important;
+    }
+    .p-helper {
+        padding-bottom: 0 !important;
+    }
+    .pt-7 {
+        padding-top: 3rem !important ;
+    }
+    .iq-p {
+        z-index: 3;
+    }
+    .mozak-right {
+        position: absolute;
+        width: 50%;
+        opacity: 0.7;
+    }
+    .box a h3 {
+        font-size: 15px;
+    }
+    .pb-3rem {
+        padding-bottom: 3rem !important;
+    }
+    .zal {
+        font-size: 28pt !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .mozak-right {
+        position: absolute;
+        width: 20%;
+        opacity: 0.7;
+    }
+}
+.h4 {
+    font-size: 21px !important;
+    color: white;
+}
+.zal {
+    font: normal normal 900 64px/32px Roboto;
+}
+.tran {
+    font: normal normal normal 28px/32px Roboto;
+}
+.clr-white {
+    color: white !important;
 }
