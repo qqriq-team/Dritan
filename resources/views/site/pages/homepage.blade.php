@@ -26,7 +26,7 @@
      <img class="mobile mobile-img-home" src="/assets/img/dritanmob2.png">
           <div class="homepage-text">
        <h1 class="position-absolute p-4">
-“Kreće novi put evropske, građanske i <br> ekološke Crne Gore ”
+{{ __('text.intro1') }}<br> {{ __('text.intro2') }}{{ __('text.intro3') }}
        </h1>
      </div>
    </div>
@@ -35,7 +35,7 @@
      <img class="mobile mobile-img-home" src="/assets/img/dritanmob3.png">
           <div class="homepage-text">
        <h1 class="position-absolute p-4">
-“Kreće novi put evropske, građanske i <br> ekološke Crne Gore ”
+{{ __('text.intro1') }}<br> {{ __('text.intro2') }}{{ __('text.intro3') }}
 
        </h1>
      </div>
@@ -98,24 +98,29 @@
  </div>
   <div class="video-mobile-btn d-flex mobile">
     <img class="pr-2 pt-2 pb-2 pl-4 mobile" src="/assets/img/yt-icon.svg" alt=""> 
-    <div class="mobile-vid p-2 mobile">Pogledaj, poslušaj, procijeni.</div>
+    <div class="mobile-vid p-2 mobile">{{ __('text.pogledaj') }}</div>
   </div>
   <div class="video-container video-mobile position-absolute">
     <div class="blur-bg"></div>
       <div class="video-holder w-98 p-2">
         <div class="video w-98">
-          <div class="row p-2">
+
 
             @foreach ($videos as $video)
-            <div class="col-6">
+            <div class="row">
+            <div class="col-12">
               <iframe width="100%" height="315" src="{{$video->yt_link}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
             </div>
-            <div class="col-6 position-relative">
+            </div>
+            <div class="row">
+            <div class="col-12 position-relative">
               <p class="video-font">{{$video->naslov}}</p>
             </div>
+            </div>
+
             @endforeach
 
-          </div>
+
 
         </div>
         <div class="more-link">
@@ -159,12 +164,12 @@
        </div>
        <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12 pr-0 order-first order-md-last bg-black-2">
          <div class="box p-7 my-4 p-sm-0">
-          <h2 class="bold">III KONGRES</h2>
-          <h1>MOŽE CRNA GORA!</h1>
-          <h2 class="box-h3">Evropska, građanska, ekološka.</h2>
+          <h2 class="bold">{{ __('text.3kongres') }}</h2>
+          <h1 class="py-4 my-2">{{ __('text.mozecg') }}</h1>
+          <h2 class="box-h3 mb-4 pb-4">{{ __('text.evropska') }}</h2>
           <a href="/" class="d-flex btn-yt py-2 px-4 mt-4">
           <img class="pr-2" src="/assets/img/yt-icon.svg" alt="">
-          <h3 class="m-auto" >Pogledaj promo video sa III kongresa</h3>
+          <h3 class="m-auto mt-4" > {{ __('text.promovideo') }}</h3>
           </a>
           </div>
        </div>
@@ -176,9 +181,9 @@
      <div class="row w-100 p-0">
        <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12">
          <div class="box-2 p-helper  my-4 my-sm-2">
-           <h5 class="box-2-h5">RUKA PRAVDE JE KRENULA</h5>
-           <h1>SPISAK POSTOJI!</h1>
-           <h5 class="box-2-h5-text pb-5">Odgovaraće svako ko pravi obstrukcije pri oslobađanju Crne Gore od kriminala i korupcije. Crnom Gorom više neće vladati mafija! Neće više vladati ljudi iz sijenke.</h5>
+           <h5 class="box-2-h5"> {{ __('text.rukapravde') }}</h5>
+           <h1>{{ __('text.spisak') }}</h1>
+           <h5 class="box-2-h5-text pb-5">{{ __('text.opstrukcije') }}</h5>
          </div>
        </div>
         <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12 position-relative">
@@ -198,13 +203,14 @@
      </div>
    </div>
  </div>
+ <div class="bg-img-2">
  <div class="my-container">
    <div class="padding-lr">
    <div class="row mr-0">
      <div class="col-lg-4 col-md-12 col-sm-12 py-lg-5 py-sm-0 pr-0">
        <div class="iq-left d-flex justify-content-end">
          <div class="iq-text-left float-right p-4 mr-lg-4 mr-sm-0">
-           <h4 class="text-align-right py-4 clr-white">“…OVU ZEMLJU <br> RASTURI…”</h4>
+           <h4 class="text-align-right py-4 clr-white">{{ __('text.ovuzemlju') }}“…OVU ZEMLJU <br> {{ __('text.rasturi') }}RASTURI…”</h4>
            <h1  class="text-align-right">IQ 86</h1>
          </div>
         </div>
@@ -230,72 +236,78 @@
   <div class="container">
     <div class="row">
       <div class="col-12 pt-7 pb-lg-5 pb-sm-1">
-        <h1 class="clr-yellow zal">ZALAGANJE JE ČIN, A NE RIJEČ</h1>
-        <h4 class="clr-white tran py-3">Privrženost transformiše obećanja u realnost.</h4>
+        <h1 class="clr-yellow zal">{{ __('text.zalaganje') }}</h1>
+        <h4 class="clr-white tran py-3">{{ __('text.privrzensot') }}</h4>
       </div>
     </div>
 
 <div class="row p-0 ">
   <div class="col-lg-4  p-4">
     <div class="d-flex">
-      <div class="icon-r"></div>
-      <h4 class="h4 m-auto">Predsjednik Nacionalnog savjeta za borbu protiv korupcije na visokom nivou.</h4>
+      <div class="icon-r p-2"></div>
+      <h4 class="h4 mt-1">{{ __('text.titula1') }}</h4>
     </div>
   </div>
   <div class="col-lg-4  p-4">
         <div class="d-flex">
-      <div class="icon-r"></div>
-      <h4 class="h4 m-auto">Predsjednik Savjeta za kontrolu biračkog spiska.</h4>
+      <div class="icon-r p-2"></div>
+      <h4 class="h4 mt-1">{{ __('text.titula2') }}</h4>
     </div>
   </div>
   <div class="col-lg-4 p-4">
         <div class="d-flex">
-      <div class="icon-r"></div>
-      <h4 class="h4 m-auto">Predsjednik Savjeta za pravo djeteta.</h4>
+      <div class="icon-r p-2"></div>
+      <h4 class="h4 mt-1">{{ __('text.titula3') }}</h4>
     </div>
   </div>
 </div>
 <div class="row p-0">
   <div class="col-lg-4  p-4">
     <div class="d-flex">
-      <div class="icon-r"></div>
-      <h4 class="h4 m-auto">Predsjednik Komisije za politički sistem, unutrašnju i vanjsku politiku.</h4>
+      <div class="icon-r p-2"></div>
+      <h4 class="h4 mt-1">{{ __('text.titula4') }}</h4>
     </div>
   </div>
   <div class="col-lg-4  p-4">
         <div class="d-flex">
-      <div class="icon-r"></div>
-      <h4 class="h4 m-auto">Koordinator Biroa za operativnu koordinaciju.</h4>
+      <div class="icon-r p-2"></div>
+      <h4 class="h4 mt-1">{{ __('text.titula5') }}</h4>
     </div>
   </div>
   <div class="col-lg-4  p-4">
         <div class="d-flex">
-      <div class="icon-r"></div>
-      <h4 class="h4 m-auto">Zamjenik predsjednika Savjeta za NATO.</h4>
+      <div class="icon-r p-2"></div>
+      <h4 class="h4 mt-1">{{ __('text.titula6') }}</h4>
     </div>
   </div>
+  <div class="py-4 hidden">hiden</div>
 </div>
   </div>
+</div>
 </div>
 
  <div class="container-fluid p-0">
    <div class="container">
    <div class="row p-0 w-100">
      <div class="col-lg-6 col-md-12 col-sm-12  p-7 p-sm-0">
-       <div class="twit my-4 d-flex">
+       <div class="twit my-4 d-flex mobile d-lg-none">
          <a class="twitter-timeline m-auto" href="https://twitter.com/DritanAbazovic" data-tweet-limit="1"   data-width="300"
   data-height="300" data-chrome="nofooter noborders"></a>
       <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
        </div>
+              <div class="twit my-4 d-flex desktop mb-4">
+                <img src="/assets/img/Component 41 – 1.svg"  alt="">
+
+       </div>
      </div>
      <div class="col-lg-6 col-md-12 col-sm-12  p-7 p-sm-0 pb-3rem ">
        <div class="twit-box">
-         <h4>POSLJEDNJI OBJAVLJENI TWEET</h4>
-         <h1>BUDI U TOKU!</h1>
-         <p>Zaprati, uključi se, retvituj.</p>
+         <h4>{{ __('text.tvit') }}</h4>
+         <h1>{{ __('text.budiutoku') }}</h1>
+         <p>{{ __('text.ukljucise') }}</p>
          <a href="" class="t-btn d-flex py-2 px-4 mt-4">
            <img src="/assets/img/t-btn.svg" alt="">
-           <p class="m-auto">Zaprati i na tviteru</p>
+           <p class="m-auto">{{ __('text.zaprati') }}</p>
          </a>
        </div>
      </div>

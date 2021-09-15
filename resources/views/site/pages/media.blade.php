@@ -10,17 +10,17 @@ use App\Models\Languages; ?>
                     <li class="nav-item aktivizam" role="presentation">
                         <a class="nav-link p-0 px-3 " id="pills-globus-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-globus" type="button" role="tab" aria-controls="pills-globus"
-                            aria-selected="true">{{ __('text.pogledaj') }}</a>
+                            aria-selected="true" onclick="showPogledaj()">{{ __('text.pogledaj') }}</a>
                     </li>
                     <li class="nav-item aktivizam" role="presentation">
                         <a class="nav-link p-0 pl-0 pr-3  active" id="pills-aktivizam-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-aktivizam" type="button" role="tab" aria-controls="pills-aktivizam"
-                            aria-selected="false">{{ __('text.gradjanskiaktivizam') }}</a>
+                            aria-selected="false" onclick="showAktivizam()">{{ __('text.gradjanskiaktivizam') }}</a>
                     </li>
                     <li class="nav-item aktivizam" role="presentation">
                         <a class="nav-link p-0 px-3" id="pills-politicki-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-politicki" type="button" role="tab" aria-controls="pills-politicki"
-                            aria-selected="false">{{ __('text.ploitickiaktivizam') }}</a>
+                            aria-selected="false" onclick="showPoliticki()">{{ __('text.ploitickiaktivizam') }}</a>
                     </li>
 
 
@@ -29,20 +29,19 @@ use App\Models\Languages; ?>
         </div>
         <div class="container ">
             <div class="tab-content p-0" id="pills-tabContent">
-                    <div class="tab-pane fade show  active" id="pills-aktivizam" role="tabpanel"
-                        aria-labelledby="pills-istorija-tab">
-                        {{-- loop for blogs --}}
-                        gradjanski
-                        <div class="container blog-section">
-                                @foreach ($blogs as $blog)
-                                @php
-                                    $languages = Languages::where('id', $blog->lang_id)->first();
-                                @endphp
-                            <div class="row single-blog">
-                                <div class="col-6">
-                                @if (app()->getLocale() == strtolower($languages->name))
-                                    @if ($blog->categories_id == 1)
-                                        <div class="owl-carousel owl-theme drag-m ">
+
+                <div class="tab-pane fade show active" id="pills-aktivizam" role="tabpanel" aria-labelledby="pills-globus-tab">
+
+                    <div class="container blog-section">
+                        @foreach ($blogs as $blog)
+                            @php
+                                $languages = Languages::where('id', $blog->lang_id)->first();
+                            @endphp
+                            @if (app()->getLocale() == strtolower($languages->name))
+                                @if ($blog->categories_id == 1)
+                                    <div class="row single-blog">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="owl-carousel owl-theme drag-m ">
 
                                                 <div class="item">
                                                     <img class="d-block drop-desk-img-m"
@@ -60,45 +59,58 @@ use App\Models\Languages; ?>
                                                 @endforeach
 
                                             </div>
-                                                <div class="green-line"></div>
+                                            <div class="green-line"></div>
 
-                                </div> 
-                                        <div class="col-6">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div class="blog-text m-auto">
                                                 <h1 class="clr-green blog-h1">
-                                                    <a class="clr-green blog-h1" href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">{{$blog->title}}</a></h1>
-                                                <p>{{$blog ->blog}}</p>
+                                                    <a class="clr-green blog-h1"
+                                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">{{ $blog->title }}&lrm;</a>
+                                                </h1>
+                                                <p>{{ $blog->blog }}&lrm;</p>
 
                                             </div>
-                                        </div>
-                            </div>
-                                    @endif
-                                @endif
-                            @endforeach
-                        </div>
-                    </div>
+                                        <div class="d-lg-block d-none">
+                                            <ul class="position-absolute blog-links-blog-page ">
+                                                <p class="clr-yellow p-2 m-0">Podijeli ovu objavu:&lrm;</p>
+                                                <div class="d-flex">
 
-                    <div class="tab-pane fade" id="pills-politicki" role="tabpanel" aria-labelledby="pills-politicki-tab">
-                        <div class="row pb-4">
-                            <?php
-                            $colcount = count($blogs);
-                            $i = 1;
-                            ?>
-                            
-                            @foreach ($blogs as $blog)
-                                @php
-                                    $languages = Languages::where('id', $blog->lang_id)->first();
-                                @endphp
-                                @if (app()->getLocale() == strtolower($languages->name))
-                                    @if ($blog->categories_id == 2)
-                                        <div class="col-lg-4 col-12 my-4">
-                                            <a class="blog-link-space"
-                                                href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
-                                            </a>
-                                            <div class="owl-carousel owl-theme drag-m">
+                                                <li class="p-2"><img src='/assets/img/107066_square_twitter_blue_icon.svg'></li>
+                                                <li class="p-2"><img src='/assets/img/107117_square_facebook_icon.svg'></li>
+                                                <li class="p-2"><img src='/assets/img/Subtraction 2.svg'></li>
+                                                <li class="p-2"><img src='/assets/img/Subtraction 1.svg'></li>
+                                                </div>
+
+                                            </ul>
+                                        </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="tab-pane fade" id="pills-politicki" role="tabpanel" aria-labelledby="pills-politicki-tab">
+                    <div class="container blog-section">
+                        @foreach ($blogs as $blog)
+                            @php
+                                $languages = Languages::where('id', $blog->lang_id)->first();
+                            @endphp
+                            @if (app()->getLocale() == strtolower($languages->name))
+                                @if ($blog->categories_id == 2)
+                                    <div class="row single-blog">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="owl-carousel owl-theme drag-m ">
 
                                                 <div class="item">
-                                                    <img class="d-block w-100 drop-desk-img-m"
+                                                    <img class="d-block drop-desk-img-m"
                                                         src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
                                                 </div>
 
@@ -111,40 +123,40 @@ use App\Models\Languages; ?>
                                                         </div>
                                                     @endif
                                                 @endforeach
-                                            </div>
-                                            <div class="owl-bg">
-
-
-                                                <p class="p-2">{{ $blog->cover_text }}</p>
 
                                             </div>
+                                            <div class="blue-line"></div>
 
                                         </div>
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="blog-text m-auto">
+                                                <h1 class="clr-green blog-h1">
+                                                    <a class="clr-green blog-h1"
+                                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">{{ $blog->title }}&lrm;</a>
+                                                </h1>
+                                                <p>{{ $blog->blog }}&lrm;</p>
 
-
-                        @endif
-                        @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endif
                         @endforeach
-
-
-                        @if ($i++ % 3 == 0)
                     </div>
-                    <div class="row mx-0 px-0">
 
-                        @endif
-                    </div> 
-                </div>
-                <div class="tab-pane fade" id="pills-globus" role="tabpanel" aria-labelledby="pills-globus-tab">
-                    <div class="row mb-6">
-                        @foreach ($videos as $video)
+            </div>
+            <div class="tab-pane fade" id="pills-globus" role="tabpanel" aria-labelledby="pills-globus-tab">
+                <div class="row mb-6">
+                    @foreach ($videos as $video)
                         <div class="col-lg-4 col-md-6 col-sm-12 col-sx-12 my-4 media-yt ">
-                            <iframe width="100%" height="315" src="{{$video->yt_link}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                            <iframe width="100%" height="315" src="{{ $video->yt_link }}" frameborder="0"
+                                allowfullscreen="allowfullscreen"></iframe>
                         </div>
-                        @endforeach
-                    </div> 
+                    @endforeach
                 </div>
             </div>
-         </div>
+        </div>
+    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
         integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
@@ -169,6 +181,24 @@ use App\Models\Languages; ?>
             dots: true
         })
         $(".green-line:odd").addClass('odd');
-    </script>
+        $(".blue-line:odd").addClass('odd-2');
 
+    </script>
+    <script>
+        function showPogledaj() {
+            $('#pills-globus').css('display', 'block');
+            $('#pills-aktivizam').css('display', 'none');
+            $('#pills-politicki').css('display', 'none');
+        }
+        function showAktivizam() {
+            $('#pills-globus').css('display', 'none');
+            $('#pills-aktivizam').css('display', 'block');
+            $('#pills-politicki').css('display', 'none');
+        }
+        function showPoliticki() {
+            $('#pills-globus').css('display', 'none');
+            $('#pills-aktivizam').css('display', 'none');
+            $('#pills-politicki').css('display', 'block');
+        }
+    </script>
 @endsection
