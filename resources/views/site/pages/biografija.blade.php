@@ -29,8 +29,12 @@
 </div>
 <div class="container">
 
+
 <div class="tab-content mb-7 " id="pills-tabContent">
+  
   <div class="tab-pane fade show  active" id="pills-istorija" role="tabpanel" aria-labelledby="pills-istorija-tab">
+       <h1 class="bio-h1">{{ __('text.biografija') }} </h1>
+   <p class="bio-p">{{ __('text.biografija-intro') }}</p>
 <ul
       class="nav w-100 nav-pills mb-3 m-auto d-flex justify-content-between timeline"
       id="pills-tab"
@@ -48,9 +52,9 @@
           aria-controls="pills-djetinjstvo"
           aria-selected="true"
         >
-          <img class="round-img" src="/assets/img/9.png" alt="" />
+          <img class="round-img" src="/assets/img/obrazovanje.jpg" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">{{ __('text.djetinjstvo') }}</p>
+          <p class="position-absolute">{{ __('text.obrazovanje') }}</p>
         </button>
       </li>
       <li class="nav-item " role="presentation">
@@ -64,9 +68,9 @@
           aria-controls="pills-obrazovanje"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/obrazovanje.jpg" alt="" />
+          <img class="round-img" src="/assets/img/funkcije.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">{{ __('text.obrazovanje') }}</p>
+          <p class="position-absolute w-80">{{ __('text.funkcije') }}</p>
           
         </button>
       </li>
@@ -81,9 +85,9 @@
           aria-controls="pills-nauka"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/dritan-slika-1.jpg" alt="" />
+          <img class="round-img" src="/assets/img/3-naucni-rad-color.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">{{ __('text.naucnirad') }}</p>
+          <p class="position-absolute w-80">{{ __('text.karijera') }}</p>
 
         </button>
       </li>
@@ -98,9 +102,9 @@
           aria-controls="pills-karijera"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/dritan33.png" alt="" />
+          <img class="round-img" src="/assets/img/4-radna-karijera-color.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">{{ __('text.karijera') }}</p>
+          <p class="position-absolute ">{{ __('text.politicka-karijera') }}</p>
 
         </button>
       </li>
@@ -115,9 +119,9 @@
           aria-controls="pills-politika"
           aria-selected="false"
         >
-          <img class="round-img" src="/assets/img/dritan4.png" alt="" />
+          <img class="round-img" src="/assets/img/privatnizivot.png" alt="" />
           <div class="circle"></div>
-          <p class="position-absolute">{{ __('text.politickiangazman') }}</p>
+          <p class="position-absolute">{{ __('text.privatni-zivot') }}</p>
 
         </button>
       </li>
@@ -148,9 +152,13 @@
         aria-labelledby="pills-djetinjstvo-tab"
       >
         <h1 class="h1-m"></h1>
-        <p>
-{{ __('text.djetinjstvo1') }} 
-        </p>
+<p>{{ __('text.obrazovanje-bio1') }} </p>
+<p>{{ __('text.obrazovanje-bio2') }} </p>
+<p>{{ __('text.obrazovanje-bio3') }} </p>
+<p>{{ __('text.obrazovanje-bio4') }} </p>
+<p>{{ __('text.obrazovanje-bio5') }} </p>
+
+
       </div>
       <div
         class="tab-pane fade"
@@ -159,13 +167,13 @@
         aria-labelledby="pills-obrazovanje-tab"
       >
         <h1 class="h1-m"></h1>
-        <p>
-{{ __('text.obrazovanje1') }} 
-<br>
-<br>
-{{ __('text.obrazovanje2') }} 
+<p>{{ __('text.funkcije-bio1') }} </p>
+<p>{{ __('text.funkcije-bio2') }} </p>
+<p>{{ __('text.funkcije-bio3') }} </p>
+<p>{{ __('text.funkcije-bio4') }} </p>
+<p>{{ __('text.funkcije-bio5') }} </p>
+<p>{{ __('text.funkcije-bio6') }} </p>
 
-        </p>
       </div>
       <div
         class="tab-pane fade"
@@ -175,22 +183,10 @@
       >
         <h1 class="h1-m"></h1>
         <p>
-          {{ __('text.rad1') }} 
+          {{ __('text.karijera-bio1') }} 
         </p>
          <p>
-          {{ __('text.rad2') }} 
-        </p>
-         <p>
-        {{ __('text.rad3') }} 
-        </p>
-         <p>
-        {{ __('text.rad4') }} 
-        </p>
-        <p>
-        {{ __('text.rad5') }} 
-        </p>
-        <p>
-        {{ __('text.rad6') }} 
+          {{ __('text.karijera-bio2') }} 
         </p>
       </div>
             <div
@@ -202,15 +198,28 @@
         <h1 class="h1-m"></h1>
         <p>
           <p>
-        {{ __('text.karijera1') }} 
+        {{ __('text.politickakarijera-bio1') }} 
 
           </p>
           <p>
-        {{ __('text.karijera2') }} 
+        {{ __('text.politickakarijera-bio2') }} 
 
           </p>
           <p>
-        {{ __('text.karijera3') }} 
+        {{ __('text.politickakarijera-bio3') }} 
+
+          </p>
+          <p>
+        {{ __('text.politickakarijera-bio4') }} 
+
+          </p>
+
+          <p>
+        {{ __('text.politickakarijera-bio5') }} 
+
+          </p>
+               <p>
+        {{ __('text.politickakarijera-bio6') }} 
 
           </p>
         </p>
@@ -224,17 +233,11 @@
          <h1 class="h1-m"></h1>
          <p>
           <p>
-        {{ __('text.angazman1') }} 
-        <br>
-        {{ __('text.angazman2') }} 
-
+        {{ __('text.privatnizivot-bio1') }} 
           </p>
           <p>
-        {{ __('text.angazman3') }} 
 
-          </p>
-          <p>
-        {{ __('text.angazman4') }} 
+        {{ __('text.privatnizivot-bio2') }} 
 
           </p>
          </p>
@@ -253,19 +256,178 @@
     </div>
   </div>
   <div class="tab-pane fade" id="pills-biografija" role="tabpanel" aria-labelledby="pills-biografija-tab">
-   <div class="row">
-    <div class="col-lg-3 col-12"><img src="/assets/img/Dritan Abazović - Kosmopolitska kultura - Knjiga-Mockup.png" width="100%" alt=""></div>
-    <div class="col-lg-9 col-12">
-      <h2 class="clr-blue">{{ __('text.naslovknjige1') }}</h2>
-      <p>{{ __('text.tekstknjige1') }}</p>
-      <div class="d-flex">
-        <a href="/assets/books/Dritan Abazovic -Kosmopolitska kultura i globalna pravda.pdf" target="_blank" class="clr-yellow d-flex">
-          <div class="icon"><img src="/assets/img/book-icon.svg" alt=""></div>
-          <a href="/assets/books/Dritan Abazovic -Kosmopolitska kultura i globalna pravda.pdf" target="_blank" class="clr-yellow p-1">Prelistaj knjigu</a>
-        </a>
+    <div class="row">
+      <div class="d-flex justify-content-center w-100">
+        <div class="bib-tab p-2 " onclick="showKnjige()">
+          <div  class="icon-box-b box-b-1 active-box"><img src="/assets/img/Layer 2.svg" alt=""></div>
+          <div class="bib-text p-2">{{ __('text.knjige') }} </div>
+        </div>
+          <div class="bib-tab p-2" onclick="showPredavanja()">
+          <div class="icon-box-b box-b-2"><img src="/assets/img/Ikonice lecturer - icon.svg" alt=""></div>
+          <div class="bib-text p-2">{{ __('text.predavanja') }} </div>
+        </div>
+        <div class="bib-tab p-2" onclick="showKonferencije()">
+          <div class="icon-box-b box-b-3"><img src="/assets/img/Ikonice - conference-icon.svg" alt=""></div>
+          <div class="bib-text p-2">{{ __('text.konferencije') }} </div>
+        </div>
+        <div class="bib-tab p-2" onclick="showSpisi()">
+          <div class="icon-box-b box-b-4"><img src="/assets/img/Ikonice - rticle-icon.svg" alt=""></div>
+          <div class="bib-text p-2">{{ __('text.spisi') }} </div>
+        </div>
+
       </div>
     </div>
-   </div>
+    <div class="row">
+      <div id="knjige" class="mt-4">
+        <div class="knjige-h1">
+          <h1 class="my-3">{{ __('text.naslovknjige1') }} </h1>
+          <p>{{ __('text.knjiga1') }}</p>
+          <a href="" class="book-btn-2 "><img src="/assets/img/book-icon1.svg" class="p-3 clr-white" width="64px" alt="">{{ __('text.prelistaj') }} </a>
+        </div>
+      </div>
+      <div id="predavanja" class="mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-12">
+
+
+            <p>{{ __('text.predavanja1') }}</p>
+            <p>{{ __('text.predavanja2') }}</p>
+            <p>
+              {{ __('text.predavanja3') }}
+            </p>
+            <p>
+             {{ __('text.predavanja4') }}
+            </p>
+            <p>
+             {{ __('text.predavanja5') }}
+            </p>
+          </div>
+          <div class="col-lg-4 col-12">
+          <p>
+          {{ __('text.predavanja6') }}
+          </p>
+          <p>
+           {{ __('text.predavanja7') }}
+          </p>
+          <p>
+         {{ __('text.predavanja8') }}
+          </p>
+          <p>
+{{ __('text.predavanja9') }}
+          </p>
+          </div>
+          <div class="col-lg-4 col-12">
+            <p>
+{{ __('text.predavanja10') }}
+            </p>
+            <p>
+{{ __('text.predavanja11') }}
+            </p>
+            <p>
+{{ __('text.predavanja12') }}
+            </p>
+            <p>{{ __('text.predavanja13') }}</p>
+            <p>{{ __('text.predavanja14') }}</p>
+
+          </div>
+
+        </div>
+      </div>
+      <div id="konferencije"  class="mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-12">
+            <p>
+{{ __('text.konferencije1') }} 
+            </p>
+            <p>
+{{ __('text.konferencije2') }} 
+
+            </p>
+            <p>
+{{ __('text.konferencije3') }} 
+
+            </p>
+          </div>
+          <div class="col-lg-4 col-12">
+            <p>
+           {{ __('text.konferencije4') }} 
+
+            </p>
+            <p>
+{{ __('text.konferencije5') }} 
+
+            </p>
+            <p>
+{{ __('text.konferencije6') }} 
+
+            </p>
+          </div>
+          <div class="col-lg-4 col-12">
+            <p>
+{{ __('text.konferencije7') }} 
+
+            </p>
+            <p>
+{{ __('text.konferencije8') }} 
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <div id="spisi"  class="mt-4">
+        <div class="row">
+          <div class="col-lg-4 col-12">
+            <p>
+{{ __('text.spisi1') }} 
+
+            </p>
+            <p>
+{{ __('text.spisi2') }} 
+
+            </p>
+            <p>
+{{ __('text.spisi3') }} 
+
+            </p>
+            <p>
+{{ __('text.spisi4') }} 
+
+            </p>
+          </div>
+          <div class="col-lg-4 col-12">
+            <p>
+{{ __('text.spisi5') }} 
+
+            </p>
+            <p>
+{{ __('text.spisi6') }} 
+
+            </p>
+            <p>
+{{ __('text.spisi7') }} 
+
+            </p>
+          </div>
+          <div class="col-lg-4 col-12">
+            <p>
+ {{ __('text.spisi8') }} 
+
+            </p>
+            <p>
+{{ __('text.spisi9') }} 
+
+            </p>
+            <p>
+{{ __('text.spisi10') }} 
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
   </div>
     {{-- <div class="tab-pane fade" id="pills-paneli" role="tabpanel" aria-labelledby="pills-paneli-tab">
    <div class="row">
@@ -414,5 +576,53 @@
   </div>
 </div>
 --}}
+    <script>
+        function showKnjige() {
+            $('#knjige').css('display', 'block');
+            $('#knjige').css('display', 'block');
+            $('#predavanja').css('display', 'none');
+            $('#konferencije').css('display', 'none');
+            $('#spisi').css('display', 'none');
+            $('.box-b-1').css('background', 'linear-gradient(135deg, #6e9c8c 0%, #81ada0 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-2').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-3').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-4').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
 
+
+            
+
+        }
+        function showPredavanja() {
+            $('#knjige').css('display', 'none');
+            $('#predavanja').css('display', 'block');
+            $('#konferencije').css('display', 'none');
+            $('#spisi').css('display', 'none');
+            $('.box-b-2').css('background', 'linear-gradient(135deg, #6e9c8c 0%, #81ada0 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-1').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-3').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-4').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+        }
+        function showKonferencije() {
+            $('#knjige').css('display', 'none');
+            $('#predavanja').css('display', 'none');
+            $('#konferencije').css('display', 'block');
+            $('#spisi').css('display', 'none');
+            $('.box-b-3').css('background', 'linear-gradient(135deg, #6e9c8c 0%, #81ada0 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-1').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-2').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-4').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+        }
+        function showSpisi() {
+            $('#knjige').css('display', 'none');
+            $('#predavanja').css('display', 'none');
+            $('#konferencije').css('display', 'none');
+            $('#spisi').css('display', 'block');
+            $('.box-b-4').css('background', 'linear-gradient(135deg, #6e9c8c 0%, #81ada0 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-1').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-2').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+            $('.box-b-3').css('background', 'linear-gradient(135deg, #b4ab7b 0%, #d9c787 100%) 0% 0% no-repeat padding-box');
+        }
+
+    </script>
+    
 @endsection
