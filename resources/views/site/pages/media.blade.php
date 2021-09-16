@@ -40,7 +40,9 @@ use App\Models\Languages; ?>
                             @if (app()->getLocale() == strtolower($languages->name))
                                 @if ($blog->categories_id == 1)
                                     <div class="row single-blog">
+
                                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
                                             <div class="owl-carousel owl-theme drag-m ">
 
                                                 <div class="item">
@@ -62,6 +64,7 @@ use App\Models\Languages; ?>
                                             <div class="green-line"></div>
 
                                         </div>
+
                                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div class="blog-text m-auto">
                                                 <h1 class="clr-green blog-h1">
@@ -69,6 +72,7 @@ use App\Models\Languages; ?>
                                                         href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">{{ $blog->title }}&lrm;</a>
                                                 </h1>
                                                 <p>{{ $blog->blog }}&lrm;</p>
+
 
                                             </div>
                                         <div class="d-lg-block d-none">
@@ -84,7 +88,9 @@ use App\Models\Languages; ?>
 
                                             </ul>
                                         </div>
+
                                         </div>
+
                                     </div>
                                 @endif
                             @endif
@@ -92,6 +98,7 @@ use App\Models\Languages; ?>
                     </div>
                 </div>
             </div>
+
 
 
 
@@ -127,6 +134,23 @@ use App\Models\Languages; ?>
                                             </div>
                                             <div class="blue-line"></div>
 
+
+                    @foreach ($blogs as $blog)
+
+                        @php
+                            $languages = Languages::where('id', $blog->lang_id)->first();
+                        @endphp
+                        @if (app()->getLocale() == strtolower($languages->name))
+                            @if ($blog->categories_id == 2)
+                                <div class="col-lg-4 col-12 my-4">
+                                    <a class="blog-link-space"
+                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">
+                                    </a>
+                                    <div class="owl-carousel owl-theme drag-m">
+
+                                        <div class="item">
+                                            <img class="d-block w-100 drop-desk-img-m"
+                                                src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
                                         </div>
                                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div class="blog-text m-auto">
@@ -136,6 +160,7 @@ use App\Models\Languages; ?>
                                                 </h1>
                                                 <p>{{ $blog->blog }}&lrm;</p>
 
+
                                             </div>
                                         </div>
                                     </div>
@@ -143,6 +168,7 @@ use App\Models\Languages; ?>
                             @endif
                         @endforeach
                     </div>
+
 
             </div>
             <div class="tab-pane fade" id="pills-globus" role="tabpanel" aria-labelledby="pills-globus-tab">
@@ -181,7 +207,9 @@ use App\Models\Languages; ?>
             dots: true
         })
         $(".green-line:odd").addClass('odd');
+
         $(".blue-line:odd").addClass('odd-2');
+
 
     </script>
     <script>
@@ -190,15 +218,19 @@ use App\Models\Languages; ?>
             $('#pills-aktivizam').css('display', 'none');
             $('#pills-politicki').css('display', 'none');
         }
+
         function showAktivizam() {
             $('#pills-globus').css('display', 'none');
             $('#pills-aktivizam').css('display', 'block');
             $('#pills-politicki').css('display', 'none');
         }
+
         function showPoliticki() {
             $('#pills-globus').css('display', 'none');
             $('#pills-aktivizam').css('display', 'none');
             $('#pills-politicki').css('display', 'block');
         }
     </script>
+
 @endsection
+
