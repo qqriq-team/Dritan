@@ -130,9 +130,9 @@
   </div>
      <div class="languages-mobile mobile">
     <ul class="d-flex">
-     <li class="px-2 active-language">MNE</li>
-     <li class="px-2">AL</li>
-     <li class="px-2">EN</li>
+		<li class="px-2 active-language"> <a href="/mne"> MNE </a></li>
+     <li class="px-2"><a href="/al"> AL </a></li>
+     <li class="px-2"><a href="/en"> EN </a></li>
     </ul>
    </div>
   {{-- <div class="homepage-text">
@@ -159,10 +159,10 @@
  <div class="container-flud p-0 bg-black-2">
    <div class="padding-left-0">
      <div class="row w-100 p-0 m-sm-0">
-       <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12 p-sm-0">
+       <div  class="col-lg-6 col-md-12 col-sm-12 p-sm-0">
          <img  src="/assets/img/Slika-za-homepage-URA-KONGRES-ULCINJ.jpg" alt="" class="w-100">
        </div>
-       <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12 pr-0 order-first order-md-last bg-black-2">
+       <div  class="col-lg-6 col-md-12 col-sm-12 pr-0 order-first order-md-last bg-black-2">
          <div class="box p-7 my-4 p-sm-0">
           <h2 class="bold">{{ __('text.3kongres') }}</h2>
           <h1 class="py-4 my-2">{{ __('text.mozecg') }}</h1>
@@ -179,14 +179,14 @@
  <div class="container-fliud p-0 bg-green">
    <div class="padding-right-0 ">
      <div class="row w-100 p-0">
-       <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12">
+       <div  class="col-lg-6 col-md-12 col-sm-12">
          <div class="box-2 p-helper  my-4 my-sm-2">
            <h5 class="box-2-h5"> {{ __('text.rukapravde') }}</h5>
            <h1>{{ __('text.spisak') }}</h1>
            <h5 class="box-2-h5-text pb-5">{{ __('text.opstrukcije') }}</h5>
          </div>
        </div>
-        <div data-aos="zoom-in" class="col-lg-6 col-md-12 col-sm-12 position-relative">
+        <div class="col-lg-6 col-md-12 col-sm-12 position-relative">
          <img src="/assets/img/Slika-ruka-pravde (1).png" class="position-absoulte rukapravde" alt="" class="w-100">
        </div>
      </div>
@@ -217,8 +217,8 @@
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 py-lg-5 py-sm-0 pl-0">
         <div class="images-box">
-          <img data-aos="fade-up" src="assets/img/IQ86-mozak-lijevo.png" class="mozak-left" alt="">
-          <img data-aos="fade-down"  src="/assets/img/IQ86-mozak-desno.png"
+          <img  src="assets/img/IQ86-mozak-lijevo.png" class="mozak-left" alt="">
+          <img   src="/assets/img/IQ86-mozak-desno.png"
            class="mozak-right" alt="">
         </div>
 
@@ -296,7 +296,7 @@
       <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
        </div>
               <div class="twit my-4 d-flex desktop mb-4">
-                <img src="/assets/img/Component 41 – 1.svg"  alt="">
+              <!--  <img src="/assets/img/Component 41 – 1.svg" width="100%"  alt=""> -->
 
        </div>
      </div>
