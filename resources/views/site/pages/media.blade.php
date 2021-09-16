@@ -40,7 +40,9 @@ use App\Models\Languages; ?>
                             @if (app()->getLocale() == strtolower($languages->name))
                                 @if ($blog->categories_id == 1)
                                     <div class="row single-blog">
-                                        <div class="col-6">
+
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
                                             <div class="owl-carousel owl-theme drag-m ">
 
                                                 <div class="item">
@@ -62,16 +64,33 @@ use App\Models\Languages; ?>
                                             <div class="green-line"></div>
 
                                         </div>
-                                        <div class="col-6">
+
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div class="blog-text m-auto">
                                                 <h1 class="clr-green blog-h1">
                                                     <a class="clr-green blog-h1"
-                                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">{{ $blog->title }}</a>
+                                                        href="{{ route('showBlogsOnSite', [app()->getLocale(), $blog->id]) }}">{{ $blog->title }}&lrm;</a>
                                                 </h1>
-                                                <p>{{ $blog->blog }}</p>
+                                                <p>{{ $blog->blog }}&lrm;</p>
+
 
                                             </div>
+                                        <div class="d-lg-block d-none">
+                                            <ul class="position-absolute blog-links-blog-page ">
+                                                <p class="clr-yellow p-2 m-0">Podijeli ovu objavu:&lrm;</p>
+                                                <div class="d-flex">
+
+                                                <li class="p-2"><img src='/assets/img/107066_square_twitter_blue_icon.svg'></li>
+                                                <li class="p-2"><img src='/assets/img/107117_square_facebook_icon.svg'></li>
+                                                <li class="p-2"><img src='/assets/img/Subtraction 2.svg'></li>
+                                                <li class="p-2"><img src='/assets/img/Subtraction 1.svg'></li>
+                                                </div>
+
+                                            </ul>
                                         </div>
+
+                                        </div>
+
                                     </div>
                                 @endif
                             @endif
@@ -84,8 +103,36 @@ use App\Models\Languages; ?>
 
 
 
+
             <div class="tab-pane fade" id="pills-politicki" role="tabpanel" aria-labelledby="pills-politicki-tab">
-                <div class="row pb-4">
+                    <div class="container blog-section">
+                        @foreach ($blogs as $blog)
+                            @php
+                                $languages = Languages::where('id', $blog->lang_id)->first();
+                            @endphp
+                            @if (app()->getLocale() == strtolower($languages->name))
+                                @if ($blog->categories_id == 2)
+                                    <div class="row single-blog">
+                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="owl-carousel owl-theme drag-m ">
+
+                                                <div class="item">
+                                                    <img class="d-block drop-desk-img-m"
+                                                        src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
+                                                </div>
+
+                                                @foreach ($blog_images as $blog_image)
+                                                    @if ($blog_image->blogs_id == $blog->id)
+                                                        <div class="item">
+                                                            <img class="d-block w-100 drop-desk-img-m "
+                                                                src="/assets/blog_images/{{ $blog_image->images }}"
+                                                                alt="Slika">
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+
+                                            </div>
+                                            <div class="blue-line"></div>
 
 
                     @foreach ($blogs as $blog)
@@ -106,32 +153,15 @@ use App\Models\Languages; ?>
                                                 src="/assets/blog_cover_img/{{ $blog->cover_image }}" alt="Slika">
                                         </div>
 
-                                        @foreach ($blog_images as $blog_image)
-                                            @if ($blog_image->blogs_id == $blog->id)
-                                                <div class="item">
-                                                    <img class="d-block w-100 drop-desk-img-m "
-                                                        src="/assets/blog_images/{{ $blog_image->images }}" alt="Slika">
-                                                </div>
-                                            @endif
-                                        @endforeach
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="owl-bg">
-
-
-                                        <p class="p-2">{{ $blog->cover_text }}</p>
-
-                                    </div>
-
-                                </div>
-
-
+                                @endif
                             @endif
-                        @endif
-                    @endforeach
+                        @endforeach
+                    </div>
 
-
-
-                </div>
 
             </div>
             <div class="tab-pane fade" id="pills-globus" role="tabpanel" aria-labelledby="pills-globus-tab">
@@ -170,6 +200,10 @@ use App\Models\Languages; ?>
             dots: true
         })
         $(".green-line:odd").addClass('odd');
+
+        $(".blue-line:odd").addClass('odd-2');
+
+
     </script>
     <script>
         function showPogledaj() {
@@ -190,4 +224,6 @@ use App\Models\Languages; ?>
             $('#pills-politicki').css('display', 'block');
         }
     </script>
+
 @endsection
+
